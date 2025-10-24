@@ -1,46 +1,90 @@
 const puppeteer = require('puppeteer');
 const path = require('path');
+const fs = require('fs');
 
 async function generateOGImage() {
   console.log('🚀 Launching browser...');
+  
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: 'new',
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
 
-  const page = await browser.newPage();
-  
-  // Set viewport to OpenGraph image dimensions
-  await page.setViewport({
-    width: 1200,
-    height: 630,
-    deviceScaleFactor: 2, // High DPI for better quality
-  });
+  try {
+    const page = await browser.newPage();
+    
+    // Set viewport to OG image dimensions
+    await page.setViewport({
+      width: 1200,
+      height: 630,
+      deviceScaleFactor: 2, // Higher quality (retina)
+    });
 
-  console.log('📱 Loading website...');
-  // Load your local dev server or production URL
-  await page.goto('http://localhost:3000', {
-    waitUntil: 'networkidle0',
-    timeout: 30000
-  });
+    console.log('📱 Viewport set to 1200x630');
 
-  // Wait a bit for animations to settle
-  await new Promise(resolve => setTimeout(resolve, 2000));
+    // Navigate to localhost (make sure dev server is running)
+    const url = 'http://localhost:3000';
+    console.log(`🌐 Navigating to ${url}...`);
+    
+    await page.goto(url, {
+      waitUntil: 'networkidle0',
+      timeout: 30000,
+    });
 
-  console.log('📸 Taking screenshot...');
-  const screenshotPath = path.join(__dirname, '../public/opengraph-image.png');
-  await page.screenshot({
-    path: screenshotPath,
-    type: 'png',
-  });
+    // Wait for animations to settle
+    console.log('⏳ Waiting for page to settle...');
+    await new Promise(resolve => setTimeout(resolve, 2000));
 
-  console.log(`✅ OpenGraph image saved to: ${screenshotPath}`);
+    // Optional: Execute JS to remove any unwanted elements
+    await page.evaluate(() => {
+      // Hide header if you only want hero section
+      // const header = document.querySelector('header');
+      // if (header) header.style.display = 'none';
+      
+      // Scroll to show the hero properly
+      window.scrollTo(0, 0);
+    });
 
-  await browser.close();
+    // Take screenshot
+    const outputPath = path.join(__dirname, '../public/opengraph-image.png');
+    console.log('📸 Taking screenshot...');
+    
+    await page.screenshot({
+      path: outputPath,
+      type: 'png',
+      clip: {
+        x: 0,
+        y: 0,
+        width: 1200,
+        height: 630,
+      },
+    });
+
+    console.log('✅ OG image generated successfully!');
+    console.log(`📁 Saved to: ${outputPath}`);
+
+    // Verify file exists
+    if (fs.existsSync(outputPath)) {
+      const stats = fs.statSync(outputPath);
+      console.log(`📊 File size: ${(stats.size / 1024).toFixed(2)} KB`);
+    }
+
+  } catch (error) {
+    console.error('❌ Error generating OG image:', error);
+    throw error;
+  } finally {
+    await browser.close();
+    console.log('🔒 Browser closed');
+  }
 }
 
-generateOGImage().catch(err => {
-  console.error('❌ Error generating image:', err);
-  process.exit(1);
-});
-
+// Run the script
+generateOGImage()
+  .then(() => {
+    console.log('🎉 Done!');
+    process.exit(0);
+  })
+  .catch((error) => {
+    console.error('💥 Failed:', error);
+    process.exit(1);
+  });
