@@ -103,12 +103,12 @@ export default function ProjectsPage() {
                     Service Category
                   </label>
                   <Tabs value={selectedCategory} onValueChange={setSelectedCategory}>
-                    <TabsList className="grid w-full grid-cols-2 md:grid-cols-5">
-                      <TabsTrigger value="all">All</TabsTrigger>
-                      <TabsTrigger value="TSS">Tendering</TabsTrigger>
-                      <TabsTrigger value="TDD">Due Diligence</TabsTrigger>
-                      <TabsTrigger value="EPM">EPCC</TabsTrigger>
-                      <TabsTrigger value="RE">Remote Eng.</TabsTrigger>
+                    <TabsList className="grid w-full grid-cols-2 gap-2 h-auto p-2 sm:grid-cols-3 md:grid-cols-5 md:gap-0 md:p-1">
+                      <TabsTrigger value="all" className="py-2">All</TabsTrigger>
+                      <TabsTrigger value="TSS" className="py-2">Tendering</TabsTrigger>
+                      <TabsTrigger value="TDD" className="py-2">Due Diligence</TabsTrigger>
+                      <TabsTrigger value="EPM" className="py-2">EPCC</TabsTrigger>
+                      <TabsTrigger value="RE" className="py-2">Remote Eng.</TabsTrigger>
                     </TabsList>
                   </Tabs>
                 </div>
@@ -119,10 +119,10 @@ export default function ProjectsPage() {
                     Project Year
                   </label>
                   <Tabs value={selectedYear} onValueChange={setSelectedYear}>
-                    <TabsList className="flex flex-wrap gap-1 h-auto p-1">
-                      <TabsTrigger value="all" className="flex-shrink-0">All Years</TabsTrigger>
+                    <TabsList className="flex flex-wrap gap-2 h-auto p-2">
+                      <TabsTrigger value="all" className="flex-shrink-0 py-2">All Years</TabsTrigger>
                       {years.map((year) => (
-                        <TabsTrigger key={year} value={year} className="flex-shrink-0">
+                        <TabsTrigger key={year} value={year} className="flex-shrink-0 py-2">
                           {year}
                         </TabsTrigger>
                       ))}

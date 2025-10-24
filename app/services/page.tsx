@@ -210,17 +210,17 @@ export default function ServicesPage() {
           </div>
 
           <Tabs defaultValue="0" className="w-full">
-            <TabsList className="mb-8 grid w-full grid-cols-2 lg:grid-cols-4">
+            <TabsList className="mb-8 grid w-full grid-cols-1 gap-2 h-auto sm:grid-cols-2 lg:grid-cols-4 lg:gap-0">
               {mainServices.map((service, index) => {
                 const Icon = service.icon
                 return (
                   <TabsTrigger
                     key={index}
                     value={index.toString()}
-                    className="flex items-center gap-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white"
+                    className="flex items-center gap-2 py-3 data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white"
                   >
                     <Icon className="h-4 w-4" />
-                    <span className="hidden sm:inline">{service.title.split(" ")[0]}</span>
+                    <span>{service.title}</span>
                   </TabsTrigger>
                 )
               })}
