@@ -3,8 +3,8 @@ import Link from "next/link"
 import { ArrowRight, Target, Eye, Award, Users, TrendingUp, Shield, Lightbulb, Heart, Zap } from "lucide-react"
 import BlurFade from "@/components/magicui/blur-fade"
 import NumberTicker from "@/components/magicui/number-ticker"
-import ShimmerButton from "@/components/magicui/shimmer-button"
 import { Button } from "@/components/ui/button"
+import { RainbowButton } from "@/components/ui/rainbow-button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
@@ -138,7 +138,7 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="grid gap-6 lg:grid-cols-2">
             <BlurFade delay={0.1}>
-              <Card className="h-full border-2 border-blue-200 ">
+              <Card className="glass-card h-full">
                 <CardContent className="p-8">
                   <Target className="mb-4 h-12 w-12 text-blue-600" />
                   <h2 className="mb-4 text-3xl font-bold text-slate-900">Our Mission</h2>
@@ -153,7 +153,7 @@ export default function AboutPage() {
             </BlurFade>
 
             <BlurFade delay={0.2}>
-              <Card className="h-full border-2 border-cyan-200 ">
+              <Card className="glass-card h-full">
                 <CardContent className="p-8">
                   <Eye className="mb-4 h-12 w-12 text-cyan-600" />
                   <h2 className="mb-4 text-3xl font-bold text-slate-900">Our Vision</h2>
@@ -175,7 +175,7 @@ export default function AboutPage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat, index) => (
               <BlurFade key={index} delay={0.1 + index * 0.1}>
-                <Card className="border-blue-200 bg-blue-50">
+                <Card className="glass-card-blue glass-card-hover">
                   <CardContent className="p-6 text-center">
                     <div className="mb-2 text-5xl font-bold text-blue-900">
                       <NumberTicker value={stat.value} />
@@ -218,18 +218,18 @@ export default function AboutPage() {
               const Icon = value.icon
               return (
                 <BlurFade key={index} delay={0.1 + index * 0.1}>
-                  <Card className="group h-full overflow-hidden border-2  transition-all hover:shadow-xl hover:-translate-y-1">
-                    <CardContent className="p-6">
+                  <Card className="glass-card glass-card-hover group h-full overflow-hidden flex flex-col">
+                    <CardContent className="p-6 flex flex-col flex-1">
                       <div className={cn(
-                        "mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br text-white",
+                        "mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br text-white transition-transform duration-300 group-hover:scale-110",
                         value.gradient
                       )}>
                         <Icon className="h-7 w-7" />
                       </div>
-                      <h3 className="mb-3 text-xl font-semibold text-slate-900">
+                      <h3 className="mb-3 text-xl font-semibold text-slate-900 transition-colors duration-300 group-hover:text-blue-700">
                         {value.title}
                       </h3>
-                      <p className="text-slate-600">
+                      <p className="text-slate-600 flex-1">
                         {value.description}
                       </p>
                     </CardContent>
@@ -287,7 +287,7 @@ export default function AboutPage() {
             </div>
 
             <BlurFade delay={0.3}>
-              <Card className="h-full border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-white">
+              <Card className="glass-card-blue h-full">
                 <CardContent className="p-8">
                   <h3 className="mb-6 text-2xl font-bold text-slate-900">Our Commitment</h3>
                   <div className="space-y-6">
@@ -341,7 +341,7 @@ export default function AboutPage() {
                   )}>
                     {/* Content */}
                     <Card className={cn(
-                      "border-2 bg-white transition-all hover:shadow-xl",
+                      "glass-card glass-card-hover",
                       index % 2 === 0 ? "md:mr-8" : "md:ml-8 md:col-start-2"
                     )}>
                       <CardContent className="p-6">
@@ -382,12 +382,11 @@ export default function AboutPage() {
           
           <BlurFade delay={0.3}>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white" asChild>
+              <RainbowButton size="lg" asChild>
                 <Link href="/contact">
                   Get In Touch
-                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-              </Button>
+              </RainbowButton>
               
               <Button size="lg" variant="outline" asChild>
                 <Link href="/services">

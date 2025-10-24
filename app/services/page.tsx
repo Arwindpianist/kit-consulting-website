@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ArrowRight, Building2, FileCheck, Cog, TrendingUp, Users, Wrench, ClipboardCheck, BarChart3, Shield } from "lucide-react"
 import BlurFade from "@/components/magicui/blur-fade"
 import { Button } from "@/components/ui/button"
+import { RainbowButton } from "@/components/ui/rainbow-button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -171,23 +172,21 @@ export default function ServicesPage() {
             </BlurFade>
 
             <BlurFade delay={0.3}>
-              <p className="text-xl text-slate-700">
+              <p className="mb-8 text-xl text-slate-700">
                 Comprehensive engineering services tailored to the energy and manufacturing sectors. 
                 From concept to commissioning, we deliver excellence at every stage.
               </p>
             </BlurFade>
 
             <BlurFade delay={0.4}>
-              <Button
+              <RainbowButton
                 size="lg"
-                className="mt-8 bg-gradient-to-r from-blue-600 to-cyan-600 text-white"
                 asChild
               >
                 <Link href="/contact">
                   Discuss Your Project
-                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-              </Button>
+              </RainbowButton>
             </BlurFade>
           </div>
         </div>
@@ -232,7 +231,7 @@ export default function ServicesPage() {
               return (
                 <TabsContent key={index} value={index.toString()}>
                   <BlurFade delay={0.1}>
-                    <Card className="border-2">
+                    <Card className="glass-card">
                       <CardHeader>
                         <div className="mb-4 flex items-start justify-between">
                           <div className={cn(
@@ -290,7 +289,6 @@ export default function ServicesPage() {
                           <Button asChild>
                             <Link href="/contact">
                               Request Quote
-                              <ArrowRight className="ml-2 h-4 w-4" />
                             </Link>
                           </Button>
                         </div>
@@ -326,13 +324,13 @@ export default function ServicesPage() {
               const Icon = service.icon
               return (
                 <BlurFade key={index} delay={0.1 + index * 0.1}>
-                  <Card className="group h-full transition-all hover:shadow-xl hover:-translate-y-1">
-                    <CardContent className="p-6 text-center">
+                  <Card className="glass-card glass-card-hover group h-full flex flex-col">
+                    <CardContent className="p-6 text-center flex flex-col flex-1">
                       <Icon className="mx-auto mb-4 h-12 w-12 text-blue-600 transition-transform group-hover:scale-110" />
-                      <h3 className="mb-2 font-semibold text-slate-900">
+                      <h3 className="mb-2 font-semibold text-slate-900 transition-colors duration-300 group-hover:text-blue-700">
                         {service.title}
                       </h3>
-                      <p className="text-sm text-slate-600">
+                      <p className="text-sm text-slate-600 flex-1">
                         {service.description}
                       </p>
                     </CardContent>
@@ -364,13 +362,13 @@ export default function ServicesPage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {industries.map((industry, index) => (
               <BlurFade key={index} delay={0.1 + index * 0.1}>
-                <Card className="group h-full overflow-hidden border-2 transition-all hover:border-blue-500 hover:shadow-xl">
-                  <CardContent className="p-6 text-center">
-                    <div className="mb-4 text-5xl">{industry.icon}</div>
-                    <h3 className="mb-2 text-xl font-semibold text-slate-900">
+                <Card className="glass-card glass-card-hover group h-full overflow-hidden flex flex-col">
+                  <CardContent className="p-6 text-center flex flex-col flex-1">
+                    <div className="mb-4 text-5xl transition-transform duration-300 group-hover:scale-110">{industry.icon}</div>
+                    <h3 className="mb-2 text-xl font-semibold text-slate-900 transition-colors duration-300 group-hover:text-blue-700">
                       {industry.name}
                     </h3>
-                    <p className="text-sm text-slate-600">
+                    <p className="text-sm text-slate-600 flex-1">
                       {industry.description}
                     </p>
                   </CardContent>
@@ -397,12 +395,11 @@ export default function ServicesPage() {
           </BlurFade>
           
           <BlurFade delay={0.3}>
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white" asChild>
+            <RainbowButton size="lg" asChild>
               <Link href="/contact">
                 Start Your Project Today
-                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-            </Button>
+            </RainbowButton>
           </BlurFade>
         </div>
       </section>

@@ -3,7 +3,8 @@
 import type React from "react"
 import { useState } from "react"
 import { toast } from "sonner"
-import { Send, CheckCircle, AlertCircle } from "./icons"
+import { AlertCircle } from "./icons"
+import { RainbowButton } from "@/components/ui/rainbow-button"
 import type { ContactFormData } from "@/lib/types"
 
 export default function ContactForm() {
@@ -108,10 +109,10 @@ export default function ContactForm() {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          className={`w-full rounded-xl border-2 px-4 py-3 text-sm transition-all focus:outline-none ${
+          className={`w-full rounded-xl border-2 px-4 py-3 text-sm transition-all focus:outline-none bg-white ${
             errors.name
               ? "border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20"
-              : "border-gray-200 focus:border-[#0066cc] focus:ring-2 focus:ring-[#0066cc]/20"
+              : "border-slate-300 focus:border-[#0066cc] focus:ring-2 focus:ring-[#0066cc]/20"
           }`}
           placeholder="Your full name"
         />
@@ -133,10 +134,10 @@ export default function ContactForm() {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          className={`w-full rounded-xl border-2 px-4 py-3 text-sm transition-all focus:outline-none ${
+          className={`w-full rounded-xl border-2 px-4 py-3 text-sm transition-all focus:outline-none bg-white ${
             errors.email
               ? "border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20"
-              : "border-gray-200 focus:border-[#0066cc] focus:ring-2 focus:ring-[#0066cc]/20"
+              : "border-slate-300 focus:border-[#0066cc] focus:ring-2 focus:ring-[#0066cc]/20"
           }`}
           placeholder="your.email@company.com"
         />
@@ -158,7 +159,7 @@ export default function ContactForm() {
           name="company"
           value={formData.company}
           onChange={handleChange}
-          className="w-full rounded-xl border-2 border-gray-200 px-4 py-3 text-sm transition-all focus:border-[#0066cc] focus:outline-none focus:ring-2 focus:ring-[#0066cc]/20"
+          className="w-full rounded-xl border-2 border-slate-300 px-4 py-3 text-sm transition-all focus:border-[#0066cc] focus:outline-none focus:ring-2 focus:ring-[#0066cc]/20 bg-white"
           placeholder="Your company name"
         />
       </div>
@@ -173,10 +174,10 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           rows={6}
-          className={`w-full rounded-xl border-2 px-4 py-3 text-sm transition-all focus:outline-none ${
+          className={`w-full rounded-xl border-2 px-4 py-3 text-sm transition-all focus:outline-none bg-white ${
             errors.message
               ? "border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20"
-              : "border-gray-200 focus:border-[#0066cc] focus:ring-2 focus:ring-[#0066cc]/20"
+              : "border-slate-300 focus:border-[#0066cc] focus:ring-2 focus:ring-[#0066cc]/20"
           }`}
           placeholder="Tell us about your project or inquiry..."
         />
@@ -188,10 +189,11 @@ export default function ContactForm() {
         )}
       </div>
 
-      <button
+      <RainbowButton
         type="submit"
         disabled={isSubmitting}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#003366] to-[#0066cc] px-8 py-4 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:scale-100"
+        className="w-full"
+        size="lg"
       >
         {isSubmitting ? (
           <>
@@ -199,12 +201,9 @@ export default function ContactForm() {
             Sending...
           </>
         ) : (
-          <>
-            Send Message
-            <Send className="h-4 w-4" />
-          </>
+          "Send Message"
         )}
-      </button>
+      </RainbowButton>
     </form>
   )
 }

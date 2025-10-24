@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation"
 import { useState, useEffect } from "react"
 import { Menu, X, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { RainbowButton } from "@/components/ui/rainbow-button"
 import { Badge } from "@/components/ui/badge"
 import {
   Sheet,
@@ -89,16 +90,14 @@ export default function Header() {
 
         {/* CTA Button */}
         <div className="hidden items-center gap-4 lg:flex">
-          <Button
+          <RainbowButton
             asChild
             size="lg"
-            className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-md hover:shadow-lg"
           >
             <Link href="/contact">
               Get Started
-              <ChevronRight className="ml-2 h-4 w-4" />
             </Link>
-          </Button>
+          </RainbowButton>
         </div>
 
         {/* Mobile Menu */}
@@ -142,17 +141,16 @@ export default function Header() {
                 </Link>
               ))}
               
-              <Button
+              <RainbowButton
                 asChild
                 size="lg"
-                className="mt-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white"
+                className="mt-4"
                 onClick={() => setOpen(false)}
               >
                 <Link href="/contact">
                   Get Started
-                  <ChevronRight className="ml-2 h-4 w-4" />
                 </Link>
-              </Button>
+              </RainbowButton>
             </div>
 
             <div className="mt-8 border-t pt-8">

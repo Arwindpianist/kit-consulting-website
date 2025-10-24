@@ -1,9 +1,11 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import { ArrowRight, Building2, Search, Filter } from "lucide-react"
 import BlurFade from "@/components/magicui/blur-fade"
 import { Button } from "@/components/ui/button"
+import { RainbowButton } from "@/components/ui/rainbow-button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -72,7 +74,7 @@ export default function ProjectsPage() {
         <div className="container-custom">
           {/* Filters */}
           <BlurFade delay={0.1}>
-            <Card className="mb-8 border-2 bg-white/95 backdrop-blur-sm">
+            <Card className="glass-card mb-8">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Filter className="h-5 w-5" />
@@ -157,7 +159,7 @@ export default function ProjectsPage() {
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {filteredProjects.map((project, index) => (
                 <BlurFade key={project.id} delay={0.1 + index * 0.05}>
-                  <Card className="group flex h-full flex-col overflow-hidden border-2 bg-white/95 backdrop-blur-sm transition-all hover:border-blue-500 hover:shadow-xl hover:-translate-y-1">
+                  <Card className="glass-card glass-card-hover group flex h-full flex-col overflow-hidden">
                     <CardHeader>
                       <div className="mb-3 flex items-start justify-between">
                         <Badge className={categoryMap[project.category].color}>
@@ -182,10 +184,9 @@ export default function ProjectsPage() {
                         className="mt-auto w-full justify-center text-blue-600 hover:bg-blue-50 hover:text-blue-700"
                         asChild
                       >
-                        <a href="/contact">
+                        <Link href="/contact">
                           Learn More
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </a>
+                        </Link>
                       </Button>
                     </CardContent>
                   </Card>
@@ -194,7 +195,7 @@ export default function ProjectsPage() {
             </div>
           ) : (
             <BlurFade delay={0.2}>
-              <Card className="border-2 border-dashed bg-white/95 backdrop-blur-sm">
+              <Card className="glass-card border-2 border-dashed">
                 <CardContent className="flex flex-col items-center justify-center py-16 text-center">
                   <Building2 className="mb-4 h-16 w-16 text-slate-300" />
                   <h3 className="mb-2 text-xl font-semibold text-slate-900">
@@ -231,7 +232,7 @@ export default function ProjectsPage() {
               { value: "30+", label: "Expert Team" },
             ].map((stat, index) => (
               <BlurFade key={index} delay={0.1 + index * 0.1}>
-                <Card className="border-blue-200 bg-blue-50/95 backdrop-blur-sm">
+                <Card className="glass-card-blue glass-card-hover">
                   <CardContent className="p-6 text-center">
                     <div className="mb-2 text-5xl font-bold text-blue-900">{stat.value}</div>
                     <p className="text-sm font-medium text-slate-700">{stat.label}</p>
@@ -259,16 +260,14 @@ export default function ProjectsPage() {
           </BlurFade>
           
           <BlurFade delay={0.3}>
-            <Button
+            <RainbowButton
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white"
               asChild
             >
-              <a href="/contact">
+              <Link href="/contact">
                 Get In Touch
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
+              </Link>
+            </RainbowButton>
           </BlurFade>
         </div>
       </section>

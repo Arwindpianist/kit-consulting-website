@@ -93,7 +93,7 @@ export async function POST(request: Request) {
     // Send email
     await transporter.sendMail({
       from: `"KIT Consulting Website" <${zohoUser}>`,
-      to: "kit.engineering.consulting@gmail.com",
+      to: "info@kitengineeringconsulting.net",
       replyTo: body.email,
       subject: `New Contact Form Submission from ${body.name}`,
       html: emailHtml,

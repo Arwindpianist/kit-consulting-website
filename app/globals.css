@@ -29,6 +29,27 @@
   --radius-lg: 0.75rem;
   --radius-xl: 1rem;
   --radius-2xl: 1.5rem;
+
+  /* Aurora Gradient */
+  --aurora-gradient: linear-gradient(
+    110deg,
+    #0066cc 0%,
+    #38bdf8 20%,
+    #818cf8 40%,
+    #c084fc 60%,
+    #0066cc 80%,
+    #38bdf8 100%
+  );
+
+  /* Rainbow Colors */
+  --color-1: 210 100% 63%;
+  --color-2: 195 100% 63%;
+  --color-3: 0 100% 63%;
+  --color-4: 270 100% 63%;
+  --color-5: 90 100% 63%;
+
+  /* Rainbow Animation */
+  --animate-rainbow: rainbow var(--speed, 2s) infinite linear;
 }
 
 @layer base {
@@ -50,6 +71,62 @@
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+/* Professional Button Styles */
+button[data-slot="button"] {
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button[data-slot="button"]:hover {
+  transform: translateY(-1px);
+}
+
+button[data-slot="button"]:active {
+  transform: translateY(0);
+}
+
+/* Primary Button - Brand Blue */
+button[data-slot="button"]:not([class*="outline"]):not([class*="ghost"]):not([class*="secondary"]):not([class*="link"]) {
+  background: #0066cc;
+  color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+button[data-slot="button"]:not([class*="outline"]):not([class*="ghost"]):not([class*="secondary"]):not([class*="link"]):hover {
+  background: #0052a3;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Glassmorphism Card Styles */
+.glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-color: rgba(59, 130, 246, 0.6);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-2px);
+}
+
+.glass-card-blue {
+  background: rgba(239, 246, 255, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
 @media (min-width: 640px) {
@@ -120,6 +197,74 @@
   }
 }
 
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes aurora {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+  }
+}
+
 .animate-marquee {
   animation: marquee var(--duration) infinite linear;
 }
@@ -134,4 +279,44 @@
 
 .animate-spin-around {
   animation: spin-around calc(var(--shimmer-duration) * 2) infinite linear;
+}
+
+.animate-gradient {
+  animation: gradient 4s ease infinite;
+}
+
+.animate-spotlight {
+  animation: spotlight 2s ease 0.75s 1 forwards;
+}
+
+.animate-orbit {
+  animation: orbit calc(var(--duration) * 1s) linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-aurora {
+  animation: aurora 8s ease infinite;
+}
+
+.bg-aurora {
+  background-image: var(--aurora-gradient);
+}
+
+.animate-rainbow {
+  animation: rainbow var(--speed, 2s) infinite linear;
+}
+
+.animate-gradient {
+  animation: gradient 3s ease infinite;
+}
+
+.bg-size-\[200\%_auto\] {
+  background-size: 200% auto;
+}
+
+.bg-size-\[200\%_100\%\] {
+  background-size: 200% 100%;
 }

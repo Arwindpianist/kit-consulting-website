@@ -4,7 +4,7 @@ import { Manrope } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import { Vortex } from "@/components/ui/vortex"
+import { WavyBackground } from "@/components/ui/wavy-background"
 import { Toaster } from "sonner"
 
 const manrope = Manrope({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] })
@@ -100,14 +100,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={manrope.className}>
         <div className="fixed inset-0 z-0">
-          <Vortex
-            particleCount={200}
-            baseHue={210}
-            rangeHue={60}
-            baseSpeed={0.05}
-            rangeSpeed={0.4}
-            backgroundColor="#f1f5f9"
-            className="h-full w-full"
+          <WavyBackground
+            backgroundFill="#f1f5f9"
+            colors={["#0066cc", "#003366", "#38bdf8", "#60a5fa", "#3b82f6"]}
+            waveWidth={50}
+            blur={10}
+            speed="slow"
+            waveOpacity={0.3}
+            containerClassName="h-full w-full"
           />
         </div>
         <div className="relative z-10">
