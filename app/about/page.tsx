@@ -10,9 +10,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = {
-  title: "About Us | KIT Consulting",
+  title: "About KIT Consulting - 15+ Years Engineering Excellence in Malaysia",
   description:
-    "Learn about KIT Consulting, a leading engineering consultancy with over 15 years of experience in the energy and manufacturing sectors. Meet our expert team and discover our commitment to excellence.",
+    "Founded in 2009, KIT Consulting (KITCON) is a leading engineering consultancy in Kuala Lumpur, Malaysia. Specializing in EPCC Project Management, we serve major clients including Petronas, Shell, Hess, ExxonMobil, BASF across Oil & Gas, Power, and Chemical industries. 43+ completed projects, ISO-certified processes.",
 }
 
 const values = [

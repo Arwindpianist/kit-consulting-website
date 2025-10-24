@@ -10,9 +10,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = {
-  title: "Our Services | KIT Consulting",
+  title: "Engineering Services - EPCC, Tendering, Due Diligence | KIT Consulting",
   description:
-    "Comprehensive engineering services including Construction Execution, Tendering & Procurement, Process Optimization, and Technical Due Diligence for the energy and manufacturing sectors.",
+    "Professional engineering services in Malaysia: EPCC Project Management for Oil & Gas, Tendering Strategies & Support, Technical Due Diligence for Power Plants, Remote Engineering Solutions. Serving Petronas, Shell, Hess, BASF & major energy sector clients across Southeast Asia.",
 }
 
 const mainServices = [

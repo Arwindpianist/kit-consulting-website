@@ -6,6 +6,7 @@ import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import { WavyBackground } from "@/components/ui/wavy-background"
 import { Toaster } from "sonner"
+import { generateOrganizationSchema } from "./schema"
 
 const manrope = Manrope({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] })
 
@@ -22,18 +23,30 @@ export const metadata: Metadata = {
     "kitcon",
     "kit engineering consulting",
     "engineering consulting malaysia",
-    "EPCC project management",
+    "EPCC project management malaysia",
     "construction execution malaysia",
-    "tendering support",
+    "tendering support malaysia",
+    "tendering strategies",
     "technical due diligence",
     "remote engineering solutions",
     "process optimization",
     "project management kuala lumpur",
     "engineering consultancy malaysia",
-    "construction consultants",
-    "industrial engineering",
-    "oil and gas consulting",
-    "infrastructure projects malaysia"
+    "oil and gas consulting malaysia",
+    "petronas contractor",
+    "shell malaysia contractor",
+    "hess malaysia contractor",
+    "power plant due diligence",
+    "chemical plant assessment",
+    "energy sector consulting",
+    "brownfield modification",
+    "pipeline project management",
+    "wellhead platform engineering",
+    "EPCIC contractor malaysia",
+    "north malay basin projects",
+    "kuala lumpur engineering services",
+    "infrastrucutre engineering malaysia",
+    "industrial plant consulting"
   ],
   authors: [{ name: "KIT Consulting", url: "https://kitengineeringconsulting.net" }],
   creator: "KIT Consulting",
@@ -98,6 +111,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateOrganizationSchema()),
+          }}
+        />
+      </head>
       <body className={manrope.className}>
         <div className="fixed inset-0 z-0">
           <WavyBackground

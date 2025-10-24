@@ -6,9 +6,17 @@ import { Card, CardContent } from "@/components/ui/card"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Contact Us | KIT Consulting",
+  title: "Contact KIT Consulting Malaysia - Engineering Consultancy in Kuala Lumpur",
   description:
-    "Get in touch with KIT Consulting for engineering consultation. We're here to discuss your projects and provide expert guidance for your construction execution, tendering, and process optimization needs.",
+    "Contact KIT Consulting (KITCON) for EPCC Project Management, Tendering Support, and Engineering Services in Malaysia. Based in Kuala Lumpur, serving Oil & Gas, Power, and Chemical industries across Southeast Asia. Call +60-12-9100417 or email info@kitengineeringconsulting.net",
+  keywords: [
+    "contact engineering consultant malaysia",
+    "kuala lumpur engineering services",
+    "epcc contractor contact",
+    "tendering support malaysia",
+    "technical due diligence services",
+    "engineering consultation malaysia"
+  ]
 }
 
 const contactInfo = [
