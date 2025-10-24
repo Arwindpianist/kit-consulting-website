@@ -1,0 +1,15 @@
+<svg width="230" height="60" viewBox="0 0 230 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background shape -->
+  <rect x="2" y="8" width="44" height="44" rx="8" fill="#003366"/>
+  
+  <!-- KIT lettermark with geometric design -->
+  <path d="M12 18 L12 42 L15 42 L15 32 L20 42 L24 42 L18 30 L24 18 L20 18 L15 26 L15 18 Z" fill="white"/>
+  <rect x="26" y="18" width="3" height="24" fill="white"/>
+  <path d="M31 18 L31 21 L35 21 L35 42 L38 42 L38 21 L42 21 L42 18 Z" fill="white"/>
+  
+  <!-- Company name - CONSULTING at box height (reduced 5%) -->
+  <text x="56" y="39" font-family="Arial, sans-serif" font-size="22.8" font-weight="700" fill="#003366" letter-spacing="1.9">
+    CONSULTING
+  </text>
+</svg>
+

@@ -1,0 +1,136 @@
+# KIT Consulting Website - Cursor Rules
+
+## Project Overview
+This is the official website for KIT Consulting, an engineering consultancy specializing in construction execution, tendering, and process optimization.
+
+## Tech Stack
+- Next.js 15.1.2 with App Router
+- React 18.3.1
+- TypeScript
+- Tailwind CSS v4.1.9
+- shadcn/ui components (full library)
+- Magic UI components (add as needed from magicui.design)
+- Framer Motion for animations
+- Lucide React for icons
+- Deployed on Vercel
+
+## Code Style & Conventions
+
+### TypeScript
+- Use strict TypeScript with proper type definitions
+- Define interfaces in `lib/types.ts`
+- Use type imports: `import type { Type } from '...'`
+- Avoid `any` types
+
+### React & Next.js
+- Use Server Components by default
+- Add `"use client"` only when necessary (forms, state, interactivity)
+- Use async/await for Server Components
+- Follow Next.js 15 conventions (await params, searchParams, etc.)
+
+### Styling
+- Use Tailwind CSS utility classes
+- Follow the brand color palette:
+  - Primary: #003366
+  - Secondary: #0066cc
+  - Accent: #e5e5e5
+- Use semantic color tokens from globals.css
+- Mobile-first responsive design
+- Use `leading-relaxed` for body text
+- Use `text-balance` or `text-pretty` for headings
+
+### Component Structure
+- Keep components small and focused
+- Use composition over large components
+- Place reusable components in `/components`
+- Page-specific components can stay in page files
+
+### File Naming
+- Use kebab-case for files: `contact-form.tsx`
+- Use PascalCase for components: `ContactForm`
+- Use camelCase for utilities and functions
+
+### Data Management
+- Static data in `lib/data/` as JSON files
+- Type definitions in `lib/types.ts`
+- Use Server Components to fetch data when possible
+
+## Brand Guidelines
+
+### Colors
+- Primary Blue: #003366 (headers, primary elements)
+- Secondary Blue: #0066cc (links, CTAs, accents)
+- White: #FFFFFF (backgrounds)
+- Gray: #666666 (body text)
+- Light Gray: #e5e5e5 (borders, subtle backgrounds)
+
+### Typography
+- Font: Inter (from next/font/google)
+- Headings: Bold, text-[#003366]
+- Body: Regular, text-[#666666], leading-relaxed
+- Links: text-[#0066cc], hover:text-[#003366]
+
+### Spacing
+- Use Tailwind spacing scale (p-4, p-6, p-8, etc.)
+- Consistent section padding: py-16 md:py-24
+- Container: container-custom class (max-width: 1280px)
+
+## API Routes
+
+### Contact Form
+- Endpoint: `/api/contact`
+- Method: POST
+- Body: `{ name, email, company, message }`
+- TODO: Integrate with Zoho Mail SMTP
+
+## Deployment
+
+### Vercel Configuration
+- Framework: Next.js
+- Build Command: `npm run build`
+- Output Directory: `.next`
+- Install Command: `npm install`
+
+### Environment Variables (Future)
+- `ZOHO_EMAIL`: Zoho email address
+- `ZOHO_PASSWORD`: Zoho app password
+
+## Development Workflow
+
+1. Run dev server: `npm run dev`
+2. Test on multiple screen sizes
+3. Check accessibility (semantic HTML, ARIA labels)
+4. Validate forms and error states
+5. Test all navigation links
+6. Build before committing: `npm run build`
+
+## SEO Checklist
+- ✅ Metadata in all pages
+- ✅ Semantic HTML structure
+- ✅ Alt text for images
+- ✅ sitemap.xml
+- ✅ robots.txt
+- ✅ Open Graph tags
+
+## Accessibility
+- Use semantic HTML elements
+- Include ARIA labels where needed
+- Ensure keyboard navigation works
+- Maintain color contrast ratios
+- Test with screen readers
+
+## Performance
+- Use Next.js Image component for images
+- Lazy load components when appropriate
+- Minimize client-side JavaScript
+- Use Server Components by default
+- Optimize fonts with next/font
+
+## Future Enhancements
+- [ ] Integrate Zoho Mail for contact form
+- [ ] Add Google Maps embed
+- [ ] Add blog/news section
+- [ ] Add case studies with detailed project pages
+- [ ] Add testimonials section
+- [ ] Implement analytics tracking
+- [ ] Add multi-language support

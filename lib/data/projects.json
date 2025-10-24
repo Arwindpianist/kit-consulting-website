@@ -1,0 +1,240 @@
+[
+  {
+    "id": 1,
+    "scope": "In-House Consultant - Technical / Commercial / Business Development for Battery Energy Storage System Business",
+    "year": "2025",
+    "client": "Genetec Technology",
+    "category": "TSS"
+  },
+  {
+    "id": 2,
+    "scope": "Configuration of Free Radius Software",
+    "year": "2024",
+    "client": "AppNERV Technology",
+    "category": "RE"
+  },
+  {
+    "id": 3,
+    "scope": "Due Diligence and Site Visit Assessments for Power Plants (Jimah, Kuala Langat and EDRA Melaka)",
+    "year": "2024",
+    "client": "Prolintas",
+    "category": "TDD"
+  },
+  {
+    "id": 4,
+    "scope": "Technical / Commercial proposal compilation and strategic support for Battery Energy Storage System in Kuwait",
+    "year": "2024",
+    "client": "Genetec Technology",
+    "category": "TSS"
+  },
+  {
+    "id": 5,
+    "scope": "Shell Preventive Maintenance Corrective Maintenance Contract",
+    "year": "2023",
+    "client": "Shell Malaysia Trading",
+    "category": "TSS"
+  },
+  {
+    "id": 6,
+    "scope": "EPCC for NGDS Kulim Pipeline Project",
+    "year": "2023",
+    "client": "Gas Malaysia",
+    "category": "TSS"
+  },
+  {
+    "id": 7,
+    "scope": "Shell Bagan Luar Installation Maintenance Project",
+    "year": "2023",
+    "client": "Shell Malaysia Trading",
+    "category": "TSS"
+  },
+  {
+    "id": 8,
+    "scope": "EPCC for NGDS Tampoi Pipeline Project",
+    "year": "2023",
+    "client": "Gas Malaysia",
+    "category": "TSS"
+  },
+  {
+    "id": 9,
+    "scope": "Provision of EPCC for FFD Phase 4A, North Malay Basin - HUC only",
+    "year": "2021",
+    "client": "HESS",
+    "category": "TSS"
+  },
+  {
+    "id": 10,
+    "scope": "Modeling and re-drawing existing Office Administration Building in AutoCAD format",
+    "year": "2022",
+    "client": "MalaySino",
+    "category": "RE"
+  },
+  {
+    "id": 11,
+    "scope": "Piping isometric generation for new modification project",
+    "year": "2022",
+    "client": "MalaySino",
+    "category": "RE"
+  },
+  {
+    "id": 12,
+    "scope": "Generating 3D Skid model for new Air Compressor Skid including 2D GA and piping modification drawings",
+    "year": "2022",
+    "client": "Fluidtech",
+    "category": "RE"
+  },
+  {
+    "id": 13,
+    "scope": "Provision of Topside Major Maintenance",
+    "year": "2021",
+    "client": "Shell",
+    "category": "TSS"
+  },
+  {
+    "id": 14,
+    "scope": "Provision of EPCIC for Host Tie-In and Brownfield Modification Works for Additional Andalas Pipeline Project",
+    "year": "2020",
+    "client": "Carigali-PTTEP Operating Company",
+    "category": "TSS"
+  },
+  {
+    "id": 15,
+    "scope": "Provision of HUC and Brownfield Tie-In Modification Works",
+    "year": "2020",
+    "client": "Shell",
+    "category": "EPM"
+  },
+  {
+    "id": 16,
+    "scope": "Provision of PCC Works for BNJT-K BN-84 Well Tie-In",
+    "year": "2019",
+    "client": "Hess",
+    "category": "TSS"
+  },
+  {
+    "id": 17,
+    "scope": "Provision of EPCC+I for FFD Phase 3 Facilities NMB - HUC Only",
+    "year": "2018",
+    "client": "Petronas Carigali",
+    "category": "TSS"
+  },
+  {
+    "id": 18,
+    "scope": "Provision of EPCI for Salman - HUC Only",
+    "year": "2019",
+    "client": "Brunei Shell Petroleum",
+    "category": "TSS"
+  },
+  {
+    "id": 19,
+    "scope": "Provision of EPCC for PFLNG1 Relocation and Tie-In",
+    "year": "2019",
+    "client": "Petronas FLNG Sdn Bhd",
+    "category": "TSS"
+  },
+  {
+    "id": 20,
+    "scope": "Provision of Pan Malaysia Maintenance, Construction and Modification Contract",
+    "year": "2018",
+    "client": "ExxonMobil Exploration and Production Malaysia",
+    "category": "TSS"
+  },
+  {
+    "id": 21,
+    "scope": "Provision of ePCC for Bokor Betty Brownfield and Rejuvenation Project",
+    "year": "2017",
+    "client": "BASF Petronas Chemicals",
+    "category": "TSS"
+  },
+  {
+    "id": 22,
+    "scope": "Provision of EPCC for Kinarut - Erb West Compressor Upgrading Project",
+    "year": "2017",
+    "client": "Petronas Carigali",
+    "category": "TSS"
+  },
+  {
+    "id": 23,
+    "scope": "Provision of EPCIC for PEGAGA Development Project - HUC Only",
+    "year": "2017",
+    "client": "Petronas Carigali",
+    "category": "TSS"
+  },
+  {
+    "id": 24,
+    "scope": "BPC Cherry Project - Civil & Structure Works",
+    "year": "2017",
+    "client": "Mubadala Petroleum",
+    "category": "TSS"
+  },
+  {
+    "id": 25,
+    "scope": "Provision of RWHP for Full Field Development Project Phase 2, NMB - HUC only",
+    "year": "2017",
+    "client": "HESS",
+    "category": "TSS"
+  },
+  {
+    "id": 26,
+    "scope": "Provision of EPCIC for SIPROD of D35DP-B",
+    "year": "2016",
+    "client": "HESS",
+    "category": "EPM"
+  },
+  {
+    "id": 27,
+    "scope": "Honeydew Road Works and Infrastructure Upgrading Project",
+    "year": "2016",
+    "client": "BASF Petronas Chemicals",
+    "category": "TSS"
+  },
+  {
+    "id": 28,
+    "scope": "Provision of EPCC for Layang Development Project - HUC Only",
+    "year": "2016",
+    "client": "ROC Oil",
+    "category": "TSS"
+  },
+  {
+    "id": 29,
+    "scope": "Provision of EPCC for BNJT-K and TTJT-A Wellhead Platforms - HUC Only",
+    "year": "2016",
+    "client": "JX Nippon",
+    "category": "TSS"
+  },
+  {
+    "id": 30,
+    "scope": "Provision of Remote Wellhead Platforms for Full Field Development Project, North Malay Basin",
+    "year": "2016",
+    "client": "Petronas Carigali",
+    "category": "TSS"
+  },
+  {
+    "id": 31,
+    "scope": "Provision of FEED and EPCIC for RS3 Project",
+    "year": "2015",
+    "client": "Petronas",
+    "category": "EPM"
+  },
+  {
+    "id": 32,
+    "scope": "Hibiscus Infrastructure Upgrading Project",
+    "year": "2015",
+    "client": "BASF Petronas Chemicals",
+    "category": "EPM"
+  },
+  {
+    "id": 33,
+    "scope": "Provision of Brownfield Works on MDPP, MDB and JKB for JDA Block B-17",
+    "year": "2016",
+    "client": "Carigali-PTTEP Operating Company",
+    "category": "TSS"
+  },
+  {
+    "id": 34,
+    "scope": "Due Diligence Plant for Multi Purpose Reactor Plant in Thailand",
+    "year": "2010",
+    "client": "Emery Oleochemicals",
+    "category": "TDD"
+  }
+]
