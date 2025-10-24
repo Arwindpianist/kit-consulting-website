@@ -10,30 +10,85 @@ import { Toaster } from "sonner"
 const manrope = Manrope({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] })
 
 export const metadata: Metadata = {
-  title: "KIT Consulting | Engineering & Project Management Solutions",
+  metadataBase: new URL('https://kitengineeringconsulting.net'),
+  title: {
+    default: "KIT Consulting | KITCON - Engineering & Project Management Solutions",
+    template: "%s | KIT Consulting"
+  },
   description:
-    "Your trusted partner in Construction Execution, Tendering and Process Optimization. Expert EPCC project management, technical due diligence, and remote engineering solutions.",
-  keywords:
-    "engineering consulting, EPCC project management, tendering support, technical due diligence, remote engineering, construction execution",
-  authors: [{ name: "KIT Consulting" }],
+    "KIT Consulting (KITCON) - Your trusted partner in Construction Execution, Tendering and Process Optimization. Expert EPCC project management, technical due diligence, and remote engineering solutions across Malaysia and Southeast Asia.",
+  keywords: [
+    "kit consulting",
+    "kitcon",
+    "kit engineering consulting",
+    "engineering consulting malaysia",
+    "EPCC project management",
+    "construction execution malaysia",
+    "tendering support",
+    "technical due diligence",
+    "remote engineering solutions",
+    "process optimization",
+    "project management kuala lumpur",
+    "engineering consultancy malaysia",
+    "construction consultants",
+    "industrial engineering",
+    "oil and gas consulting",
+    "infrastructure projects malaysia"
+  ],
+  authors: [{ name: "KIT Consulting", url: "https://kitengineeringconsulting.net" }],
+  creator: "KIT Consulting",
+  publisher: "KIT Consulting",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
-    title: "KIT Consulting | Engineering & Project Management Solutions",
-    description: "Your trusted partner in Construction Execution, Tendering and Process Optimization.",
-    url: "https://kitconsulting.com",
-    siteName: "KIT Consulting",
-    locale: "en_US",
     type: "website",
+    locale: "en_US",
+    url: "https://kitengineeringconsulting.net",
+    siteName: "KIT Consulting | KITCON",
+    title: "KIT Consulting | KITCON - Engineering & Project Management Solutions",
+    description: "Your trusted partner in Construction Execution, Tendering and Process Optimization. 15+ years of excellence in EPCC project management across Malaysia and Southeast Asia.",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "KIT Consulting - Engineering Excellence",
+      }
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "KIT Consulting | Engineering & Project Management Solutions",
+    title: "KIT Consulting | KITCON - Engineering & Project Management Solutions",
     description: "Your trusted partner in Construction Execution, Tendering and Process Optimization.",
+    images: ["/opengraph-image.png"],
+    creator: "@kitconsulting",
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
-  generator: "v0.app",
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/icon', sizes: '32x32' },
+    ],
+    apple: '/apple-icon',
+  },
+  verification: {
+    // Add these later when you set up
+    // google: 'your-google-verification-code',
+    // yandex: 'your-yandex-verification-code',
+  },
 }
 
 export default function RootLayout({
