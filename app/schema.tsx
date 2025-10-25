@@ -7,7 +7,7 @@ export function generateOrganizationSchema() {
     url: 'https://kitengineeringconsulting.net',
     logo: 'https://kitengineeringconsulting.net/icon',
     description: 'Professional engineering consulting services specializing in Construction Execution, Tendering, and Process Optimization for energy and manufacturing sectors in Malaysia and Southeast Asia.',
-    foundingDate: '2009',
+    foundingDate: '2014',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Kuala Lumpur',

@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils"
 export const metadata: Metadata = {
   title: "About KIT Consulting - 15+ Years Engineering Excellence in Malaysia",
   description:
-    "Founded in 2009, KIT Consulting (KITCON) is a leading engineering consultancy in Kuala Lumpur, Malaysia. Specializing in EPCC Project Management, we serve major clients including Petronas, Shell, Hess, ExxonMobil, BASF across Oil & Gas, Power, and Chemical industries. 43+ completed projects, ISO-certified processes.",
+    "Founded in 2014, KIT Consulting (KITCON) is a leading engineering consultancy in Kuala Lumpur, Malaysia. Specializing in EPCC Project Management, we serve major clients including Petronas, Shell, Hess, ExxonMobil, BASF across Oil & Gas, Power, and Chemical industries. 43+ completed projects, ISO-certified processes.",
 }
 
 const values = [
@@ -74,7 +74,7 @@ const expertise = [
 
 const milestones = [
   {
-    year: "2009",
+    year: "2014",
     title: "Company Founded",
     description: "KIT Consulting established to serve the energy sector",
   },
@@ -94,7 +94,7 @@ const milestones = [
     description: "Launched remote engineering services and digital solutions",
   },
   {
-    year: "2024",
+    year: "2025",
     title: "50+ Projects",
     description: "Celebrated successful delivery of over 50 major projects",
   },

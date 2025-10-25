@@ -30,7 +30,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Engineering excellence in Construction Execution, Tendering, and Process Optimization since 2009.
+              Engineering excellence in Construction Execution, Tendering, and Process Optimization since 2014.
             </p>
           </div>
 

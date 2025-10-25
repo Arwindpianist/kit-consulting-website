@@ -79,10 +79,10 @@ export default function HomePage() {
           <div className="mx-auto max-w-4xl text-center">
             {/* Story Begins - Company Identity */}
             <BlurFade delay={0.2} yOffset={20}>
-              <Badge className="mb-6 bg-blue-600 text-white hover:bg-blue-700 border-2 border-blue-900 animate-pulse-glow text-sm px-4 py-2">
-                <Award className="mr-2 h-4 w-4" />
-                Engineering Excellence Since 2009
-              </Badge>
+            <Badge className="mb-6 bg-blue-600 text-white hover:bg-blue-700 border-2 border-blue-900 animate-pulse-glow text-sm px-4 py-2">
+              <Award className="mr-2 h-4 w-4" />
+              Engineering Excellence Since 2014
+            </Badge>
             </BlurFade>
 
             {/* The Promise - Main Headline with dramatic reveal */}
