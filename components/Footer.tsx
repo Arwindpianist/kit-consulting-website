@@ -55,11 +55,11 @@ export default function Footer() {
             <h3 className="mb-2 text-sm font-semibold">Contact</h3>
             <div className="grid grid-cols-1 gap-2 md:grid-cols-3">
               <a
-                href="mailto:justin@kitengineeringconsulting.net"
+                href="mailto:info@kitengineeringconsulting.net"
                 className="flex items-center gap-2 text-xs text-slate-400 transition-colors hover:text-white"
               >
                 <Mail className="h-3.5 w-3.5 flex-shrink-0 text-blue-400" />
-                <span className="truncate">justin@kitengineeringconsulting.net</span>
+                <span className="truncate">info@kitengineeringconsulting.net</span>
               </a>
               <a
                 href="tel:+60129100417"
