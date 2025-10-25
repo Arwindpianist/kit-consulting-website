@@ -78,9 +78,14 @@ export default function Footer() {
 
         {/* Bottom Bar - Minimal */}
         <div className="mt-4 flex flex-col items-center justify-between gap-2 border-t border-slate-800 pt-4 text-xs sm:flex-row">
-          <p className="text-slate-500">
-            © {currentYear} KIT Consulting. All rights reserved.
-          </p>
+          <div className="text-center sm:text-left">
+            <p className="text-slate-500">
+              © {currentYear} KIT Consulting. All rights reserved.
+            </p>
+            <p className="text-slate-600 text-[10px] mt-1">
+              Business Registration No.: RA0067918M / 202103015495
+            </p>
+          </div>
           <div className="flex items-center gap-4 text-slate-500">
             <span className="rounded-full border border-slate-700 px-2 py-0.5 text-[10px]">ISO Certified</span>
             <Link href="/privacy" className="transition-colors hover:text-slate-300">

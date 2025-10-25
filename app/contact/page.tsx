@@ -195,6 +195,12 @@ export default function ContactPage() {
                           </a>
                         </div>
                       </div>
+                      <div className="mt-4 pt-4 border-t border-slate-200">
+                        <p className="text-xs font-semibold text-slate-700 mb-1">Business Name</p>
+                        <p className="text-sm text-slate-900 mb-2">KIT CONSULTING</p>
+                        <p className="text-xs font-semibold text-slate-700 mb-1">Business Registration No.</p>
+                        <p className="text-sm text-slate-900">RA0067918M / 202103015495</p>
+                      </div>
                     </CardContent>
                   </Card>
                 </BlurFade>
