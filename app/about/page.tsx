@@ -79,14 +79,14 @@ const milestones = [
     description: "KIT Consulting established to serve the energy sector",
   },
   {
-    year: "2012",
-    title: "Major Expansion",
-    description: "Expanded services to include manufacturing and chemical processing",
-  },
-  {
     year: "2015",
     title: "Regional Growth",
     description: "Extended operations across Southeast Asia",
+  },
+  {
+    year: "2017",
+    title: "Major Expansion",
+    description: "Expanded services to include manufacturing and chemical processing",
   },
   {
     year: "2020",

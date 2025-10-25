@@ -23,8 +23,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    value: "justin@kitengineeringconsulting.net",
-    link: "mailto:justin@kitengineeringconsulting.net",
+    value: "info@kitengineeringconsulting.net",
+    link: "mailto:info@kitengineeringconsulting.net",
     gradient: "from-blue-500 to-cyan-500",
   },
   {
@@ -304,10 +304,10 @@ export default function ContactPage() {
             <p className="text-slate-700">
               Or email us directly at{" "}
               <a
-                href="mailto:justin@kitengineeringconsulting.net"
+                href="mailto:info@kitengineeringconsulting.net"
                 className="font-semibold text-blue-600 underline hover:text-blue-700"
               >
-                justin@kitengineeringconsulting.net
+                info@kitengineeringconsulting.net
               </a>
             </p>
           </BlurFade>
