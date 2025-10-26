@@ -124,7 +124,7 @@ export default function AboutPage() {
 
             <BlurFade delay={0.3}>
               <p className="text-xl text-slate-700">
-                For over 15 years, KIT Consulting has been a trusted partner in the energy 
+                For over 11 years, KIT Consulting has been a trusted partner in the energy 
                 and manufacturing sectors, delivering world-class engineering solutions that 
                 drive success and innovation.
               </p>
