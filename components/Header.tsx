@@ -163,7 +163,7 @@ export default function Header() {
           </Drawer.Trigger>
         <Drawer.Portal>
           <Drawer.Overlay className="fixed inset-0 z-40 bg-slate-900/10" />
-          <Drawer.Content className="fixed bottom-0 left-0 right-0 z-50 flex h-[75vh] flex-col overflow-hidden rounded-t-[2rem] border-t border-white/20 bg-white/70 shadow-[0_-12px_28px_rgba(15,23,42,0.08)] backdrop-blur-md">
+          <Drawer.Content className="fixed bottom-0 left-0 right-0 z-50 flex h-[75vh] flex-col overflow-hidden rounded-t-[2rem] border-t border-white/15 bg-white/85 shadow-[0_-8px_24px_rgba(15,23,42,0.08)]">
               {/* Accessibility Elements (Hidden) */}
               <Drawer.Title className="sr-only">Navigation Menu</Drawer.Title>
               <Drawer.Description className="sr-only">
@@ -172,7 +172,7 @@ export default function Header() {
 
               {/* Drag Handle */}
               <div className="relative z-10 flex justify-center pt-3 pb-4 cursor-grab active:cursor-grabbing">
-                <div className="h-1.5 w-12 rounded-full bg-white/70 shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-transform active:scale-95" />
+                <div className="h-1.5 w-12 rounded-full bg-slate-200/70 shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-transform active:scale-95" />
               </div>
 
             {/* Scrollable Navigation */}
@@ -202,7 +202,7 @@ export default function Header() {
 
                 {/* CTA Section */}
                 <div 
-                  className="relative rounded-2xl border border-white/20 bg-gradient-to-br from-blue-600/75 via-blue-500/70 to-sky-400/65 p-6 text-white shadow-sm shadow-blue-500/15 backdrop-blur-sm"
+                  className="relative rounded-2xl border border-white/20 bg-gradient-to-br from-blue-600/80 via-blue-500/70 to-sky-400/65 p-6 text-white shadow-sm shadow-blue-500/15"
                 >
                   <div className="relative z-10">
                     <p className="mb-2 text-sm font-medium opacity-90">Ready to start?</p>
@@ -226,7 +226,7 @@ export default function Header() {
                 >
                   <a
                     href="mailto:info@kitengineeringconsulting.net"
-                    className="group flex flex-col items-center justify-center rounded-2xl border border-white/25 bg-white/60 backdrop-blur-sm p-4 text-center shadow-sm shadow-slate-900/10 transition-transform hover:bg-white/70 hover:shadow-md hover:shadow-slate-900/12 active:scale-95"
+                    className="group flex flex-col items-center justify-center rounded-2xl border border-white/20 bg-white/70 p-4 text-center shadow-sm shadow-slate-900/8 transition-transform hover:bg-white/75 hover:shadow-md hover:shadow-slate-900/10 active:scale-95"
                   >
                     <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-blue-50/70">
                       <span className="text-xl">📧</span>
@@ -236,7 +236,7 @@ export default function Header() {
                   </a>
                   <a
                     href="tel:+60129100417"
-                    className="group flex flex-col items-center justify-center rounded-2xl border border-white/25 bg-white/60 backdrop-blur-sm p-4 text-center shadow-sm shadow-slate-900/10 transition-transform hover:bg-white/70 hover:shadow-md hover:shadow-slate-900/12 active:scale-95"
+                    className="group flex flex-col items-center justify-center rounded-2xl border border-white/20 bg-white/70 p-4 text-center shadow-sm shadow-slate-900/8 transition-transform hover:bg-white/75 hover:shadow-md hover:shadow-slate-900/10 active:scale-95"
                   >
                     <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-blue-50/70">
                       <span className="text-xl">📞</span>
