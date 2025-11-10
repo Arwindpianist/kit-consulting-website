@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowRight, Building2, FileCheck, Cog, TrendingUp, Users, Wrench, ClipboardCheck, BarChart3, Shield } from "lucide-react"
+import { ArrowRight, Building2, FileCheck, Cog, TrendingUp, Users, Wrench, ClipboardCheck, BarChart3, Shield, CheckCircle } from "lucide-react"
 import BlurFade from "@/components/magicui/blur-fade"
 import { Button } from "@/components/ui/button"
 import { RainbowButton } from "@/components/ui/rainbow-button"
@@ -210,17 +210,17 @@ export default function ServicesPage() {
           </div>
 
           <Tabs defaultValue="0" className="w-full">
-            <TabsList className="mb-8 grid w-full grid-cols-1 gap-2 h-auto sm:grid-cols-2 lg:grid-cols-4 lg:gap-0">
+            <TabsList className="mb-8 grid w-full grid-cols-1 gap-3 h-auto sm:grid-cols-2 lg:grid-cols-4 p-2 bg-slate-100/80 rounded-xl">
               {mainServices.map((service, index) => {
                 const Icon = service.icon
                 return (
                   <TabsTrigger
                     key={index}
                     value={index.toString()}
-                    className="flex items-center gap-2 py-3 data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white"
+                    className="flex items-center justify-center gap-2 py-4 px-3 h-auto min-h-[4rem] whitespace-normal text-center leading-tight data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white data-[state=active]:shadow-lg transition-all hover:scale-102"
                   >
-                    <Icon className="h-4 w-4" />
-                    <span>{service.title}</span>
+                    <Icon className="h-5 w-5 shrink-0" />
+                    <span className="text-sm font-medium">{service.title}</span>
                   </TabsTrigger>
                 )
               })}
@@ -231,68 +231,73 @@ export default function ServicesPage() {
               return (
                 <TabsContent key={index} value={index.toString()}>
                   <BlurFade delay={0.1}>
-                    <Card className="glass-card">
-                      <CardHeader>
-                        <div className="mb-4 flex items-start justify-between">
+                    <Card className="glass-card p-4 md:p-6">
+                      {/* Compact Header */}
+                      <div className="mb-4 flex items-center justify-between">
+                        <div className="flex items-center gap-3">
                           <div className={cn(
-                            "flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br text-white",
+                            "flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br text-white",
                             service.gradient
                           )}>
-                            <Icon className="h-8 w-8" />
+                            <Icon className="h-6 w-6" />
                           </div>
-                          <Badge variant="secondary">{`0${index + 1}`}</Badge>
+                          <div>
+                            <Badge variant="secondary" className="mb-1 text-xs">{`0${index + 1}`}</Badge>
+                            <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
+                          </div>
                         </div>
-                        <CardTitle className="text-3xl">{service.title}</CardTitle>
-                        <CardDescription className="text-base">
-                          {service.description}
-                        </CardDescription>
-                      </CardHeader>
+                      </div>
                       
-                      <CardContent>
-                        <div className="grid gap-8 lg:grid-cols-2">
-                          <div>
-                            <h4 className="mb-4 text-lg font-semibold text-slate-900">
-                              Key Features
-                            </h4>
-                            <ul className="space-y-3">
-                              {service.features.map((feature, idx) => (
-                                <li key={idx} className="flex items-start gap-3">
-                                  <div className={cn(
-                                    "mt-0.5 h-5 w-5 flex-shrink-0 rounded-full bg-gradient-to-br p-1 text-white",
-                                    service.gradient
-                                  )}>
-                                    <ArrowRight className="h-3 w-3" />
-                                  </div>
-                                  <span className="text-slate-700">{feature}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                          
-                          <div>
-                            <h4 className="mb-4 text-lg font-semibold text-slate-900">
-                              Benefits
-                            </h4>
-                            <div className="space-y-4">
-                              {service.benefits.map((benefit, idx) => (
-                                <Card key={idx} className="border-slate-200 ">
-                                  <CardContent className="p-4">
-                                    <p className="font-medium text-slate-900">{benefit}</p>
-                                  </CardContent>
-                                </Card>
-                              ))}
-                            </div>
-                          </div>
+                      <p className="mb-6 text-sm text-slate-600">
+                        {service.description}
+                      </p>
+                      
+                      {/* Compact Two Column Layout */}
+                      <div className="grid gap-6 lg:grid-cols-2">
+                        {/* Features */}
+                        <div>
+                          <h4 className="mb-3 text-sm font-semibold text-slate-900">
+                            Key Features
+                          </h4>
+                          <ul className="space-y-2">
+                            {service.features.map((feature, idx) => (
+                              <li key={idx} className="flex items-start gap-2 text-sm">
+                                <div className={cn(
+                                  "mt-0.5 h-4 w-4 shrink-0 rounded-full bg-gradient-to-br p-0.5 text-white",
+                                  service.gradient
+                                )}>
+                                  <ArrowRight className="h-3 w-3" />
+                                </div>
+                                <span className="text-slate-700">{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
                         </div>
+                        
+                        {/* Benefits */}
+                        <div>
+                          <h4 className="mb-3 text-sm font-semibold text-slate-900">
+                            Benefits
+                          </h4>
+                          <ul className="space-y-2">
+                            {service.benefits.map((benefit, idx) => (
+                              <li key={idx} className="flex items-start gap-2 text-sm">
+                                <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-green-600" />
+                                <span className="font-medium text-slate-900">{benefit}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
 
-                        <div className="mt-8 flex justify-end">
-                          <Button asChild>
-                            <Link href="/contact">
-                              Request Quote
-                            </Link>
-                          </Button>
-                        </div>
-                      </CardContent>
+                      {/* Compact CTA */}
+                      <div className="mt-6 flex justify-end">
+                        <Button asChild size="sm">
+                          <Link href="/contact">
+                            Request Quote
+                          </Link>
+                        </Button>
+                      </div>
                     </Card>
                   </BlurFade>
                 </TabsContent>

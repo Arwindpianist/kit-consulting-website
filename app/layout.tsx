@@ -4,7 +4,7 @@ import { Manrope } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import { WavyBackground } from "@/components/ui/wavy-background"
+import { BackgroundBeams } from "@/components/ui/background-beams"
 import { Toaster } from "sonner"
 import { generateOrganizationSchema } from "./schema"
 
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     url: "https://kitengineeringconsulting.net",
     siteName: "KIT Consulting | KITCON",
     title: "KIT Consulting | KITCON - Engineering & Project Management Solutions",
-    description: "Your trusted partner in Construction Execution, Tendering and Process Optimization. 15+ years of excellence in EPCC project management across Malaysia and Southeast Asia.",
+    description: "Your trusted partner in Construction Execution, Tendering and Process Optimization. 11+ years of excellence in EPCC project management across Malaysia and Southeast Asia.",
     images: [
       {
         url: "/opengraph-image.png",
@@ -120,16 +120,8 @@ export default function RootLayout({
         />
       </head>
       <body className={manrope.className}>
-        <div className="fixed inset-0 z-0">
-          <WavyBackground
-            backgroundFill="#f1f5f9"
-            colors={["#0066cc", "#003366", "#38bdf8", "#60a5fa", "#3b82f6"]}
-            waveWidth={50}
-            blur={10}
-            speed="slow"
-            waveOpacity={0.3}
-            containerClassName="h-full w-full"
-          />
+        <div className="fixed inset-0 z-0 bg-slate-50">
+          <BackgroundBeams />
         </div>
         <div className="relative z-10">
           <Header />

@@ -56,14 +56,14 @@ export default function Footer() {
             <div className="grid grid-cols-1 gap-2 md:grid-cols-3">
               <a
                 href="mailto:info@kitengineeringconsulting.net"
-                className="flex items-center gap-2 text-xs text-slate-400 transition-colors hover:text-white"
+                className="group flex items-center gap-2 text-xs text-slate-400 transition-all hover:text-white hover:translate-x-1"
               >
                 <Mail className="h-3.5 w-3.5 flex-shrink-0 text-blue-400" />
                 <span className="truncate">info@kitengineeringconsulting.net</span>
               </a>
               <a
                 href="tel:+60129100417"
-                className="flex items-center gap-2 text-xs text-slate-400 transition-colors hover:text-white"
+                className="group flex items-center gap-2 text-xs text-slate-400 transition-all hover:text-white hover:translate-x-1"
               >
                 <Phone className="h-3.5 w-3.5 flex-shrink-0 text-blue-400" />
                 <span>012-9100 417</span>

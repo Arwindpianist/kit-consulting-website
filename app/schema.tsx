@@ -50,7 +50,7 @@ export function generateOrganizationSchema() {
     award: [
       'Petronas Approved Contractor',
       'Shell Malaysia Trusted Partner',
-      '15+ Years Industry Excellence',
+      '11+ Years Industry Excellence',
     ],
   }
 }

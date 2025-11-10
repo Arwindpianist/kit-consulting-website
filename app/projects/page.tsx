@@ -12,6 +12,9 @@ import { Input } from "@/components/ui/input"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import projectsData from "@/lib/data/projects.json"
 
+const FOUNDING_YEAR = 2014;
+const yearsInBusiness = new Date().getFullYear() - FOUNDING_YEAR;
+
 const categoryMap: Record<string, { label: string; color: string }> = {
   TSS: { label: "Tendering Support", color: "bg-blue-100 text-blue-700 border-blue-200" },
   TDD: { label: "Technical Due Diligence", color: "bg-purple-100 text-purple-700 border-purple-200" },
@@ -221,8 +224,8 @@ export default function ProjectsPage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { value: "50+", label: "Projects Completed" },
-              { value: "15+", label: "Years Experience" },
-              { value: "98%", label: "Success Rate" },
+              { value: `${yearsInBusiness}+`, label: "Years Experience" },
+              { value: "99%", label: "Success Rate" },
               { value: "30+", label: "Expert Team" },
             ].map((stat, index) => (
               <BlurFade key={index} delay={0.1 + index * 0.1}>

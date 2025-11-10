@@ -16,6 +16,9 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
 
+const FOUNDING_YEAR = 2014;
+const yearsInBusiness = new Date().getFullYear() - FOUNDING_YEAR;
+
 export const metadata: Metadata = {
   title: "KIT Consulting | Engineering & Project Management Solutions",
   description:
@@ -35,8 +38,8 @@ const clients = [
 
 const stats = [
   { value: 50, label: "Projects Delivered", suffix: "+" },
-  { value: 15, label: "Years Experience", suffix: "+" },
-  { value: 98, label: "Client Satisfaction", suffix: "%" },
+  { value: yearsInBusiness, label: "Years Experience", suffix: "+" },
+  { value: 99, label: "Client Satisfaction", suffix: "%" },
   { value: 30, label: "Industry Experts", suffix: "+" },
 ]
 
@@ -301,7 +304,7 @@ export default function HomePage() {
                 {
                   icon: TrendingUp,
                   title: "Proven Results",
-                  description: "98% client satisfaction rate",
+                  description: "99% client satisfaction rate",
                 },
                 {
                   icon: Building2,

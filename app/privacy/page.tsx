@@ -275,10 +275,10 @@ export default function PrivacyPage() {
                     <p className="text-slate-700">
                       <strong>Email:</strong>{" "}
                       <a
-                        href="mailto:justin@kitengineeringconsulting.net"
+                        href="mailto:info@kitengineeringconsulting.net"
                         className="text-blue-600 hover:text-blue-700 underline"
                       >
-                        justin@kitengineeringconsulting.net
+                        info@kitengineeringconsulting.net
                       </a>
                     </p>
                     <p className="text-slate-700">

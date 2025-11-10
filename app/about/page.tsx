@@ -9,10 +9,14 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
 
+const FOUNDING_YEAR = 2014;
+const currentYear = new Date().getFullYear();
+const yearsInBusiness = currentYear - FOUNDING_YEAR;
+
 export const metadata: Metadata = {
-  title: "About KIT Consulting - 15+ Years Engineering Excellence in Malaysia",
+  title: `About KIT Consulting - ${yearsInBusiness}+ Years Engineering Excellence in Malaysia`,
   description:
-    "Founded in 2014, KIT Consulting (KITCON) is a leading engineering consultancy in Kuala Lumpur, Malaysia. Specializing in EPCC Project Management, we serve major clients including Petronas, Shell, Hess, ExxonMobil, BASF across Oil & Gas, Power, and Chemical industries. 43+ completed projects, ISO-certified processes.",
+    `Founded in 2014, KIT Consulting (KITCON) is a leading engineering consultancy in Kuala Lumpur, Malaysia. Specializing in EPCC Project Management, we serve major clients including Petronas, Shell, Hess, ExxonMobil, BASF across Oil & Gas, Power, and Chemical industries. ${yearsInBusiness}+ years of excellence, 50+ completed projects, ISO-certified processes.`,
 }
 
 const values = [
@@ -43,10 +47,10 @@ const values = [
 ]
 
 const stats = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
+  { value: yearsInBusiness, suffix: "+", label: "Years of Experience" },
   { value: 50, suffix: "+", label: "Projects Delivered" },
   { value: 30, suffix: "+", label: "Expert Team Members" },
-  { value: 98, suffix: "%", label: "Client Satisfaction" },
+  { value: 99, suffix: "%", label: "Client Satisfaction" },
 ]
 
 const expertise = [

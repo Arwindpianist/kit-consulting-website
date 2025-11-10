@@ -57,9 +57,24 @@
     @apply border-border;
   }
   
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Link hover animations */
+  a:not(.no-underline) {
+    @apply transition-all duration-200;
+  }
+
+  /* Input and Textarea focus improvements */
+  input[data-slot="input"]:focus,
+  textarea[data-slot="textarea"]:focus {
+    @apply ring-2 ring-blue-500/20 border-blue-500 shadow-sm;
   }
 }
 
@@ -71,6 +86,36 @@
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 640px) {
+  .container-custom {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  /* Tighter section spacing on mobile */
+  section {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  /* Compact headings on mobile */
+  h1 {
+    font-size: 1.875rem !important; /* 30px */
+    line-height: 2.25rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important; /* 24px */
+    line-height: 2rem !important;
+  }
+
+  /* Reduce card padding on mobile */
+  [data-slot="card"] {
+    padding: 1rem !important;
+  }
 }
 
 /* Professional Button Styles */
@@ -311,6 +356,130 @@ button[data-slot="button"]:not([class*="outline"]):not([class*="ghost"]):not([cl
 
 .animate-gradient {
   animation: gradient 3s ease infinite;
+}
+
+/* Enhanced UX Animations */
+
+/* Card lift effect on hover */
+.card-lift {
+  @apply transition-all duration-300 ease-out;
+}
+
+.card-lift:hover {
+  @apply -translate-y-1 shadow-xl;
+}
+
+/* Scale hover effect */
+.scale-hover {
+  @apply transition-transform duration-300 ease-out;
+}
+
+.scale-hover:hover {
+  @apply scale-105;
+}
+
+/* Icon bounce animation */
+@keyframes icon-bounce {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+.icon-bounce-hover svg,
+.icon-bounce-hover:hover svg {
+  animation: icon-bounce 0.5s ease-in-out;
+}
+
+/* Shimmer effect for interactive elements */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.shimmer-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* Glow on hover */
+@keyframes glow-pulse-hover {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 102, 204, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 102, 204, 0.5);
+  }
+}
+
+.glow-on-hover:hover {
+  animation: glow-pulse-hover 2s ease-in-out infinite;
+}
+
+/* Mobile menu slide in animation */
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Vaul Drawer Styles */
+[vaul-drawer] {
+  touch-action: none;
+  will-change: transform;
+  transition: transform 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+[vaul-drawer][vaul-drawer-visible='true'][vaul-drawer-direction='bottom'] {
+  transform: translate3d(0, 0, 0);
+}
+
+[vaul-drawer-direction='bottom'] {
+  transform: translate3d(0, 100%, 0);
+}
+
+/* Smooth overlay fade */
+[vaul-overlay] {
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+[vaul-overlay][vaul-drawer-visible='true'] {
+  opacity: 1;
+}
+
+/* Scale background effect on mobile */
+[vaul-drawer-wrapper] {
+  transition: transform 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+[vaul-drawer-wrapper][vaul-drawer-visible='true'] {
+  transform: scale(0.95);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .bg-size-\[200\%_auto\] {
