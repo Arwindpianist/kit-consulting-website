@@ -163,7 +163,7 @@ export default function Header() {
           </Drawer.Trigger>
         <Drawer.Portal>
           <Drawer.Overlay className="fixed inset-0 z-40 bg-slate-900/10" />
-          <Drawer.Content className="fixed bottom-0 left-0 right-0 z-50 flex h-[78vh] flex-col overflow-hidden rounded-t-[2rem] border-t border-white/25 bg-white/55 shadow-[0_-12px_32px_rgba(15,23,42,0.12)] backdrop-blur-lg">
+          <Drawer.Content className="fixed bottom-0 left-0 right-0 z-50 flex h-[75vh] flex-col overflow-hidden rounded-t-[2rem] border-t border-white/20 bg-white/70 shadow-[0_-12px_28px_rgba(15,23,42,0.08)] backdrop-blur-md">
               {/* Accessibility Elements (Hidden) */}
               <Drawer.Title className="sr-only">Navigation Menu</Drawer.Title>
               <Drawer.Description className="sr-only">
@@ -185,14 +185,11 @@ export default function Header() {
                       href={link.href}
                       onClick={() => setOpen(false)}
                       className={cn(
-                        "group relative flex items-center justify-between rounded-2xl px-5 py-4 transition-transform duration-150 active:scale-95",
+                        "group relative flex items-center justify-between rounded-2xl px-5 py-4 transition-transform duration-150 active:scale-[0.97]",
                         isActive(link.href)
-                          ? "bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-md shadow-blue-500/20"
-                          : "bg-white/60 backdrop-blur-sm text-slate-700 hover:bg-white/70 shadow-sm shadow-slate-900/10 hover:shadow-md hover:shadow-slate-900/12 border border-white/30"
+                          ? "bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-sm shadow-blue-500/15"
+                          : "bg-white/65 text-slate-700 hover:bg-white/75 shadow-sm shadow-slate-900/8 border border-white/25"
                       )}
-                      style={{
-                        animation: `slideInFromBottom 0.4s ease-out ${index * 0.05}s both`,
-                      }}
                     >
                       <span className="text-lg font-semibold">{link.label}</span>
                       <ChevronRight className={cn(
@@ -205,10 +202,7 @@ export default function Header() {
 
                 {/* CTA Section */}
                 <div 
-                  className="relative rounded-2xl border border-white/25 bg-gradient-to-br from-blue-600/80 via-blue-500/75 to-sky-400/70 p-6 text-white shadow-md shadow-blue-500/20 backdrop-blur-md"
-                  style={{
-                    animation: `slideInFromBottom 0.4s ease-out ${navLinks.length * 0.05}s both`,
-                  }}
+                  className="relative rounded-2xl border border-white/20 bg-gradient-to-br from-blue-600/75 via-blue-500/70 to-sky-400/65 p-6 text-white shadow-sm shadow-blue-500/15 backdrop-blur-sm"
                 >
                   <div className="relative z-10">
                     <p className="mb-2 text-sm font-medium opacity-90">Ready to start?</p>
@@ -229,9 +223,6 @@ export default function Header() {
                 {/* Contact Cards */}
                 <div 
                   className="mt-4 grid grid-cols-2 gap-3"
-                  style={{
-                    animation: `slideInFromBottom 0.4s ease-out ${(navLinks.length + 1) * 0.05}s both`,
-                  }}
                 >
                   <a
                     href="mailto:info@kitengineeringconsulting.net"
