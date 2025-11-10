@@ -137,7 +137,7 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu */}
-        <Drawer.Root open={open} onOpenChange={setOpen} dismissible={true} shouldScaleBackground>
+        <Drawer.Root open={open} onOpenChange={setOpen} dismissible={true}>
           <Drawer.Trigger asChild className="lg:hidden">
             <Button 
               variant="ghost" 
@@ -162,8 +162,8 @@ export default function Header() {
             </Button>
           </Drawer.Trigger>
         <Drawer.Portal>
-          <Drawer.Overlay className="fixed inset-0 z-40 bg-slate-900/20 backdrop-blur-sm" />
-          <Drawer.Content className="fixed bottom-0 left-0 right-0 z-50 flex h-[85vh] flex-col overflow-hidden rounded-t-[2rem] border-t border-white/30 bg-gradient-to-br from-white/30 via-white/18 to-sky-100/12 shadow-[0_-24px_60px_rgba(15,23,42,0.18)] backdrop-blur-[50px] before:pointer-events-none before:absolute before:inset-0 before:rounded-t-[2rem] before:bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.45),rgba(255,255,255,0))]">
+          <Drawer.Overlay className="fixed inset-0 z-40 bg-slate-900/15 backdrop-blur-[6px]" />
+          <Drawer.Content className="fixed bottom-0 left-0 right-0 z-50 flex h-[80vh] flex-col overflow-hidden rounded-t-[2rem] border-t border-white/30 bg-white/45 shadow-[0_-16px_40px_rgba(15,23,42,0.14)] backdrop-blur-2xl before:pointer-events-none before:absolute before:inset-0 before:rounded-t-[2rem] before:bg-gradient-to-b before:from-white/35 before:to-transparent">
               {/* Accessibility Elements (Hidden) */}
               <Drawer.Title className="sr-only">Navigation Menu</Drawer.Title>
               <Drawer.Description className="sr-only">
@@ -171,12 +171,12 @@ export default function Header() {
               </Drawer.Description>
 
               {/* Drag Handle */}
-              <div className="relative z-10 flex justify-center pt-4 pb-6 cursor-grab active:cursor-grabbing">
-                <div className="h-1.5 w-12 rounded-full bg-slate-200/60 shadow-[0_1px_4px_rgba(15,23,42,0.06)] transition-all active:scale-95" />
+              <div className="relative z-10 flex justify-center pt-3 pb-5 cursor-grab active:cursor-grabbing">
+                <div className="h-1.5 w-12 rounded-full bg-slate-200/70 shadow-[0_1px_3px_rgba(15,23,42,0.05)] transition-transform active:scale-95" />
               </div>
 
             {/* Scrollable Navigation */}
-            <div className="relative z-10 flex-1 overflow-y-auto px-4 pb-6 pt-2">
+            <div className="relative z-10 flex-1 overflow-y-auto px-4 pb-6 pt-1">
                 {/* iOS-style Navigation Cards */}
                 <div className="space-y-3 mb-6">
                   {navLinks.map((link, index) => (
@@ -185,10 +185,10 @@ export default function Header() {
                       href={link.href}
                       onClick={() => setOpen(false)}
                       className={cn(
-                        "group relative flex items-center justify-between rounded-2xl px-5 py-4 transition-all duration-300 active:scale-95",
+                        "group relative flex items-center justify-between rounded-2xl px-5 py-4 transition-transform duration-200 active:scale-95",
                         isActive(link.href)
                           ? "bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg shadow-blue-500/25"
-                          : "bg-white/60 backdrop-blur-xl text-slate-700 hover:bg-white/75 shadow-lg shadow-slate-900/10 hover:shadow-2xl hover:shadow-slate-900/15 border border-white/40"
+                          : "bg-white/55 backdrop-blur-lg text-slate-700 hover:bg-white/70 shadow-md shadow-slate-900/8 hover:shadow-lg hover:shadow-slate-900/12 border border-white/35"
                       )}
                       style={{
                         animation: `slideInFromBottom 0.4s ease-out ${index * 0.05}s both`,
@@ -205,7 +205,7 @@ export default function Header() {
 
                 {/* CTA Section */}
                 <div 
-                  className="relative rounded-2xl border border-white/25 bg-gradient-to-br from-blue-600/85 via-blue-500/80 to-sky-400/75 p-6 text-white shadow-xl shadow-blue-500/35 backdrop-blur-2xl before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/20 before:via-white/8 before:to-transparent"
+                  className="relative rounded-2xl border border-white/25 bg-gradient-to-br from-blue-600/80 via-blue-500/75 to-sky-400/70 p-6 text-white shadow-lg shadow-blue-500/25 backdrop-blur-xl before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/18 before:via-transparent before:to-transparent"
                   style={{
                     animation: `slideInFromBottom 0.4s ease-out ${navLinks.length * 0.05}s both`,
                   }}
@@ -235,9 +235,9 @@ export default function Header() {
                 >
                   <a
                     href="mailto:info@kitengineeringconsulting.net"
-                    className="group flex flex-col items-center justify-center rounded-2xl border border-white/35 bg-white/60 backdrop-blur-xl p-4 text-center shadow-lg shadow-slate-900/10 transition-all hover:bg-white/75 hover:shadow-2xl hover:shadow-slate-900/15 active:scale-95"
+                    className="group flex flex-col items-center justify-center rounded-2xl border border-white/30 bg-white/55 backdrop-blur-lg p-4 text-center shadow-md shadow-slate-900/8 transition-transform hover:bg-white/70 hover:shadow-lg hover:shadow-slate-900/12 active:scale-95"
                   >
-                    <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-blue-50/80 backdrop-blur-sm">
+                    <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-blue-50/75 backdrop-blur-sm">
                       <span className="text-xl">📧</span>
                     </div>
                     <span className="text-xs font-semibold text-slate-900">Email Us</span>
@@ -245,7 +245,7 @@ export default function Header() {
                   </a>
                   <a
                     href="tel:+60129100417"
-                    className="group flex flex-col items-center justify-center rounded-2xl border border-white/35 bg-white/60 backdrop-blur-xl p-4 text-center shadow-lg shadow-slate-900/10 transition-all hover:bg-white/75 hover:shadow-2xl hover:shadow-slate-900/15 active:scale-95"
+                    className="group flex flex-col items-center justify-center rounded-2xl border border-white/30 bg-white/55 backdrop-blur-lg p-4 text-center shadow-md shadow-slate-900/8 transition-transform hover:bg-white/70 hover:shadow-lg hover:shadow-slate-900/12 active:scale-95"
                   >
                     <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-blue-50/90 backdrop-blur-sm">
                       <span className="text-xl">📞</span>
