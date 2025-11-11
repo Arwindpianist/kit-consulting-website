@@ -32,8 +32,8 @@ async function generateOGImage() {
     });
 
     // Wait for animations to settle
-    console.log('⏳ Waiting for page to settle...');
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    console.log('⏳ Waiting for page to settle (9s)...');
+    await new Promise(resolve => setTimeout(resolve, 9000));
 
     // Optional: Execute JS to remove any unwanted elements
     await page.evaluate(() => {
