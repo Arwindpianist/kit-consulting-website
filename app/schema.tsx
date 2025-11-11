@@ -55,6 +55,51 @@ export function generateOrganizationSchema() {
   }
 }
 
+export function generateLocalBusinessSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'KIT Consulting',
+    description: 'Engineering consultancy verified on Google Business, delivering EPCC project management, tendering strategy, and technical due diligence across Kuala Lumpur and Southeast Asia.',
+    url: 'https://kitengineeringconsulting.net',
+    telephone: '+60-12-9100417',
+    email: 'info@kitengineeringconsulting.net',
+    image: 'https://kitengineeringconsulting.net/opengraph-image.png',
+    priceRange: '$$$',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Level 32, Q Sentral, 2A Jalan Stesen Sentral 2',
+      addressLocality: 'Kuala Lumpur',
+      postalCode: '50470',
+      addressRegion: 'Wilayah Persekutuan Kuala Lumpur',
+      addressCountry: 'MY',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 3.1329,
+      longitude: 101.6865,
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: [
+          'Monday',
+          'Tuesday',
+          'Wednesday',
+          'Thursday',
+          'Friday',
+        ],
+        opens: '08:00',
+        closes: '18:00',
+      },
+    ],
+    sameAs: [
+      'https://g.page/r/CXO2VjS02kEDEBM/review',
+      'https://www.linkedin.com/company/kit-consulting',
+    ],
+  }
+}
+
 export function generateServiceSchema(service: {
   name: string
   description: string

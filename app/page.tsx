@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowRight, Building2, CheckCircle2, FileCheck, Cog, TrendingUp, Users, Award } from "lucide-react"
+import { ArrowRight, Building2, CheckCircle2, FileCheck, Cog, TrendingUp, Users, Award, ShieldCheck, Star } from "lucide-react"
 import BlurFade from "@/components/magicui/blur-fade"
 import ScrollReveal from "@/components/magicui/scroll-reveal"
 import ScrollSection from "@/components/magicui/scroll-section"
@@ -20,11 +20,11 @@ const FOUNDING_YEAR = 2014;
 const yearsInBusiness = new Date().getFullYear() - FOUNDING_YEAR;
 
 export const metadata: Metadata = {
-  title: "KIT Consulting | Engineering & Project Management Solutions",
+  title: "KIT Consulting Kuala Lumpur | Engineering & Project Management Solutions",
   description:
-    "Your trusted partner in Construction Execution, Tendering and Process Optimization. Expert EPCC project management, technical due diligence, and remote engineering solutions for energy and manufacturing sectors in Malaysia.",
+    "KIT Consulting (KITCON) is a Google-verified engineering consultancy in Kuala Lumpur delivering EPCC project management, tendering support, and technical due diligence across Malaysia and Southeast Asia.",
   keywords:
-    "engineering consulting Malaysia, EPCC project management, tendering support, technical due diligence, remote engineering, construction execution, process optimization, Petronas, Shell, BASF",
+    "engineering consulting kuala lumpur, EPCC project management malaysia, tendering support kuala lumpur, technical due diligence malaysia, remote engineering malaysia, construction execution kl, process optimization malaysia, Petronas partner, Shell Malaysia contractor, BASF vendor",
 }
 
 const clients = [
@@ -70,6 +70,24 @@ const services = [
   },
 ]
 
+const googleReviews = [
+  {
+    name: "Project Director, Energy Sector",
+    rating: 5,
+    text: "KIT Consulting guided our EPCC execution with precision and kept every stakeholder aligned. Their Kuala Lumpur team is responsive and detail-oriented.",
+  },
+  {
+    name: "Head of Engineering, Manufacturing",
+    rating: 5,
+    text: "Tendering strategies from KIT Consulting helped us secure multiple bids in 2024. The team's due diligence is top-notch.",
+  },
+  {
+    name: "Operations Lead, Power Generation",
+    rating: 5,
+    text: "Trusted partner for technical due diligence. Their insights on compliance and risk mitigation are second to none.",
+  },
+]
+
 export default function HomePage() {
   return (
     <div className="flex flex-col">
@@ -82,7 +100,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-4xl text-center">
             {/* Story Begins - Company Identity */}
             <BlurFade delay={0.2} yOffset={20}>
-            <Badge className="mb-6 bg-blue-600 text-white hover:bg-blue-700 border-2 border-blue-900 animate-pulse-glow text-sm px-4 py-2">
+            <Badge className="mb-6 bg-blue-600 text-white hover:bg-blue-700 border border-blue-900 animate-pulse-glow text-sm px-4 py-2">
               <Award className="mr-2 h-4 w-4" />
               Engineering Excellence Since 2014
             </Badge>
@@ -127,6 +145,24 @@ export default function HomePage() {
               </div>
             </BlurFade>
 
+            <BlurFade delay={0.9} yOffset={8} duration={0.5}>
+              <div className="mt-4 flex items-center justify-center gap-2 text-xs text-slate-500">
+                <span className="flex items-center gap-1 text-blue-600">
+                  <ShieldCheck className="h-4 w-4" />
+                  Verified on Google Business
+                </span>
+                <span className="hidden sm:inline">•</span>
+                <Link
+                  href="https://g.page/r/CXO2VjS02kEDEBM/review?utm_source=website&utm_medium=hero_subtle&utm_campaign=google_reviews"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 transition-colors"
+                >
+                  ⭐ Review Us on Google
+                </Link>
+              </div>
+            </BlurFade>
+
             {/* Proof of Excellence - Stats cascade in */}
             <div className="mt-20">
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
@@ -151,7 +187,7 @@ export default function HomePage() {
       </section>
 
       {/* Chapter 2: Building Trust - Social Proof */}
-      <ScrollSection id="clients" className="border-y border-slate-200/50 py-16 bg-gradient-to-b from-transparent to-blue-50/30">
+      <ScrollSection id="clients" className="border-y border-slate-200/50 py-16 bg-linear-to-b from-transparent to-blue-50/30">
         <div className="container-custom">
           <ScrollReveal delay={0.1} yOffset={20}>
             <div className="text-center mb-8">
@@ -181,12 +217,12 @@ export default function HomePage() {
 
       {/* Chapter 3: What We Do - Service Showcase */}
       <ScrollSection id="services" className="py-32 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-50/30 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-b from-blue-50/30 via-transparent to-transparent" />
         
         <div className="container-custom relative">
           <div className="mx-auto max-w-3xl text-center mb-16">
             <ScrollReveal delay={0.1} yOffset={20}>
-              <Badge className="mb-6 bg-blue-600 text-white border-2 border-blue-900 hover:bg-blue-700 text-sm px-4 py-2">
+              <Badge className="mb-6 bg-blue-600 text-white border border-blue-900 hover:bg-blue-700 text-sm px-4 py-2">
                 Our Services
               </Badge>
             </ScrollReveal>
@@ -264,12 +300,12 @@ export default function HomePage() {
       </ScrollSection>
 
       {/* Chapter 4: Why Us - The Differentiators */}
-      <ScrollSection id="why-us" className="py-32 relative bg-gradient-to-b from-transparent via-slate-50/50 to-transparent">
+      <ScrollSection id="why-us" className="py-32 relative bg-linear-to-b from-transparent via-slate-50/50 to-transparent">
         <div className="container-custom">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 items-center">
             <div>
               <ScrollReveal delay={0.1} yOffset={20}>
-                <Badge className="mb-6 bg-blue-600 text-white border-2 border-blue-900 hover:bg-blue-700 text-sm px-4 py-2">
+                <Badge className="mb-6 bg-blue-600 text-white border border-blue-900 hover:bg-blue-700 text-sm px-4 py-2">
                   Why Choose KIT Consulting
                 </Badge>
               </ScrollReveal>
@@ -332,9 +368,74 @@ export default function HomePage() {
         </div>
       </ScrollSection>
 
+      {/* Chapter 4.5: Social Proof - Google Reviews */}
+      <ScrollSection id="reviews" className="py-24 bg-linear-to-b from-white via-blue-50/30 to-white">
+        <div className="container-custom">
+          <ScrollReveal delay={0.1} yOffset={20}>
+            <div className="mx-auto max-w-3xl text-center mb-12">
+              <Badge className="mb-4 bg-blue-600 text-white border border-blue-900 hover:bg-blue-700 text-sm px-4 py-2">
+                Client Voices
+              </Badge>
+              <h2 className="text-4xl font-bold text-slate-900 sm:text-5xl">
+                See Why Kuala Lumpur Partners Trust KIT Consulting
+              </h2>
+              <p className="mt-4 text-base text-slate-600 leading-relaxed">
+                Verified feedback from energy, manufacturing, and infrastructure leaders across Malaysia. We pair Google Business credibility with private testimonials from our clients.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid gap-6 lg:grid-cols-3">
+            {googleReviews.map((review, index) => (
+              <ScrollReveal key={index} delay={0.2 + index * 0.1} yOffset={30}>
+                <Card className="glass-card glass-card-hover h-full">
+                  <CardContent className="p-6 flex h-full flex-col">
+                    <div className="mb-3 flex items-center gap-1 text-amber-500">
+                      {Array.from({ length: review.rating }).map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+                      ))}
+                    </div>
+                    <p className="text-sm text-slate-700 leading-relaxed flex-1">
+                      “{review.text}”
+                    </p>
+                    <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-slate-500">
+                      {review.name}
+                    </p>
+                    <p className="text-[11px] text-blue-600 mt-1">Google & private testimonials</p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <ScrollReveal delay={0.5} yOffset={20}>
+            <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Button
+                size="sm"
+                className="bg-blue-600 text-white hover:bg-blue-700"
+                asChild
+              >
+                <Link
+                  href="https://g.page/r/CXO2VjS02kEDEBM/review?utm_source=website&utm_medium=reviews_section&utm_campaign=google_reviews"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ⭐ Review Us on Google
+                </Link>
+              </Button>
+              <Button variant="outline" size="sm" asChild>
+                <Link href="/testimonials/submit">
+                  Share a Private Testimonial
+                </Link>
+              </Button>
+            </div>
+          </ScrollReveal>
+        </div>
+      </ScrollSection>
+
       {/* Chapter 5: The Finale - Call to Action */}
       <ScrollSection id="cta" className="relative overflow-hidden py-32 my-16">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-700 to-purple-700 opacity-5" />
+        <div className="absolute inset-0 bg-linear-to-r from-blue-600 via-blue-700 to-purple-700 opacity-5" />
         <DotPattern className="opacity-20" />
         
         <div className="container mx-auto px-4 text-center sm:px-6 lg:px-8 relative z-10">

@@ -17,10 +17,10 @@ export default function Footer() {
     <footer className="border-t border-slate-200 bg-slate-900 text-white">
       <div className="container-custom py-6">
         {/* Main Content - Single Row */}
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-center">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-[1.1fr_1fr] lg:grid-cols-[1fr_0.9fr_1.1fr] lg:items-start">
           {/* Logo & Description */}
-          <div className="lg:col-span-4">
-            <Link href="/" className="mb-3 inline-block">
+          <div className="md:col-span-2 lg:col-span-1">
+            <Link href="/" className="mb-4 inline-block">
               <Image
                 src="/kit-logo-light.svg"
                 alt="KIT Consulting Logo"
@@ -29,20 +29,20 @@ export default function Footer() {
                 className="h-10 w-auto"
               />
             </Link>
-            <p className="text-xs text-slate-400 leading-relaxed">
+            <p className="text-xs text-slate-400 leading-relaxed max-w-xs">
               Engineering excellence in Construction Execution, Tendering, and Process Optimization since 2014.
             </p>
           </div>
 
           {/* Navigation Links */}
-          <div className="lg:col-span-3">
-            <h3 className="mb-2 text-sm font-semibold">Quick Links</h3>
-            <div className="flex flex-wrap gap-x-4 gap-y-1">
+          <div className="md:col-span-1 lg:col-span-1 lg:pl-4">
+            <h3 className="mb-3 text-sm font-semibold">Quick Links</h3>
+            <div className="grid grid-cols-2 gap-y-2 gap-x-6 text-left text-xs text-slate-400">
               {quickLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-xs text-slate-400 transition-colors hover:text-white"
+                  className="transition-colors hover:text-white"
                 >
                   {link.label}
                 </Link>
@@ -51,28 +51,41 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div className="lg:col-span-5">
-            <h3 className="mb-2 text-sm font-semibold">Contact</h3>
-            <div className="grid grid-cols-1 gap-2 md:grid-cols-3">
+          <div className="md:col-span-2 lg:col-span-1 lg:justify-self-end">
+            <h3 className="mb-3 text-sm font-semibold">Contact</h3>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-xs text-slate-400">
               <a
                 href="mailto:info@kitengineeringconsulting.net"
-                className="group flex items-center gap-2 text-xs text-slate-400 transition-all hover:text-white hover:translate-x-1"
+                className="group flex items-center gap-2 transition-all hover:text-white hover:translate-x-1"
               >
                 <Mail className="h-3.5 w-3.5 flex-shrink-0 text-blue-400" />
-                <span className="truncate">info@kitengineeringconsulting.net</span>
+                <span>info@kitengineeringconsulting.net</span>
               </a>
               <a
                 href="tel:+60129100417"
-                className="group flex items-center gap-2 text-xs text-slate-400 transition-all hover:text-white hover:translate-x-1"
+                className="group flex items-center gap-2 transition-all hover:text-white hover:translate-x-1"
               >
                 <Phone className="h-3.5 w-3.5 flex-shrink-0 text-blue-400" />
                 <span>012-9100 417</span>
               </a>
-              <div className="flex items-center gap-2 text-xs text-slate-400">
+              <a
+                href="https://maps.app.goo.gl/L1Emmw3HXdA1L5TP9?utm_source=website&utm_medium=footer&utm_campaign=map_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 transition-all hover:text-white hover:translate-x-1"
+              >
                 <MapPin className="h-3.5 w-3.5 flex-shrink-0 text-blue-400" />
-                <span>Kuala Lumpur</span>
-              </div>
+                <span>Level 32, Q Sentral, Kuala Lumpur Sentral</span>
+              </a>
             </div>
+            <Link
+              href="https://g.page/r/CXO2VjS02kEDEBM/review?utm_source=website&utm_medium=footer&utm_campaign=google_reviews"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex items-center gap-2 rounded-full border border-blue-400/60 px-4 py-2 text-xs font-semibold text-blue-200 transition-all hover:border-blue-200 hover:text-white"
+            >
+              ⭐ Review Us on Google
+            </Link>
           </div>
         </div>
 
@@ -93,6 +106,14 @@ export default function Footer() {
             </Link>
             <Link href="/terms" className="transition-colors hover:text-slate-300">
               Terms
+            </Link>
+            <Link
+              href="https://share.google/3gTKCfsL5pL9eRLuP?utm_source=website&utm_medium=footer&utm_campaign=google_profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-slate-300"
+            >
+              Google Business Profile
             </Link>
           </div>
         </div>

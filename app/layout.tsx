@@ -1,12 +1,13 @@
 import type React from "react"
 import type { Metadata } from "next"
+import Script from "next/script"
 import { Manrope } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import { BackgroundBeams } from "@/components/ui/background-beams"
 import { Toaster } from "sonner"
-import { generateOrganizationSchema } from "./schema"
+import { generateLocalBusinessSchema, generateOrganizationSchema } from "./schema"
 
 const manrope = Manrope({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] })
 
@@ -118,8 +119,26 @@ export default function RootLayout({
             __html: JSON.stringify(generateOrganizationSchema()),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateLocalBusinessSchema()),
+          }}
+        />
       </head>
       <body className={manrope.className}>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-E66G5Z2VHZ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-E66G5Z2VHZ');
+          `}
+        </Script>
         <div className="fixed inset-0 z-0 bg-slate-50">
           <BackgroundBeams />
         </div>
