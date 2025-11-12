@@ -20,20 +20,20 @@ const FOUNDING_YEAR = 2014;
 const yearsInBusiness = new Date().getFullYear() - FOUNDING_YEAR;
 
 export const metadata: Metadata = {
-  title: "KIT Consulting Kuala Lumpur | Engineering & Project Management Solutions",
+  title: "KIT Consulting Kuala Lumpur | Engineering Experts",
   description:
-    "KIT Consulting (KITCON) is a Google-verified engineering consultancy in Kuala Lumpur delivering EPCC project management, tendering support, and technical due diligence across Malaysia and Southeast Asia.",
+    "KIT Consulting (KITCON) delivers EPCC project management, tendering support, and technical due diligence across Malaysia and Southeast Asia from our Kuala Lumpur HQ.",
   keywords:
     "engineering consulting kuala lumpur, EPCC project management malaysia, tendering support kuala lumpur, technical due diligence malaysia, remote engineering malaysia, construction execution kl, process optimization malaysia, Petronas partner, Shell Malaysia contractor, BASF vendor",
 }
 
 const clients = [
-  { name: "Petronas", logo: "https://logo.clearbit.com/petronas.com" },
-  { name: "Shell", logo: "https://logo.clearbit.com/shell.com" },
-  { name: "BASF", logo: "https://logo.clearbit.com/basf.com" },
-  { name: "Siemens", logo: "https://logo.clearbit.com/siemens.com" },
-  { name: "Mitsubishi", logo: "https://logo.clearbit.com/mitsubishielectric.com" },
-  { name: "Samsung", logo: "https://logo.clearbit.com/samsung.com" },
+  { name: "Petronas", gradient: "from-emerald-500 via-teal-500 to-cyan-500" },
+  { name: "Shell", gradient: "from-amber-500 via-orange-500 to-red-500" },
+  { name: "BASF", gradient: "from-blue-500 via-indigo-500 to-purple-500" },
+  { name: "Siemens", gradient: "from-sky-500 via-blue-500 to-slate-500" },
+  { name: "Mitsubishi", gradient: "from-rose-500 via-red-500 to-orange-500" },
+  { name: "Samsung", gradient: "from-cyan-500 via-blue-500 to-indigo-500" },
 ]
 
 const stats = [
@@ -207,7 +207,7 @@ export default function HomePage() {
                   key={index}
                   className="glass-card glass-card-hover mx-3 flex w-40 items-center justify-center p-6 transform transition-transform hover:scale-110"
                 >
-                  <ClientLogo name={client.name} logo={client.logo} />
+                  <ClientLogo name={client.name} gradient={client.gradient} />
                 </Card>
               ))}
             </Marquee>

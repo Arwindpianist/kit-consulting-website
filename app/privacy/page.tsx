@@ -3,6 +3,7 @@ import { Shield, Eye, Lock, Database, Cookie, Mail } from "lucide-react"
 import BlurFade from "@/components/magicui/blur-fade"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import ProtectedEmailLink from "@/components/ProtectedEmailLink"
 
 export const metadata: Metadata = {
   title: "Privacy Policy - KIT Consulting",
@@ -274,12 +275,11 @@ export default function PrivacyPage() {
                   <div className="space-y-2">
                     <p className="text-slate-700">
                       <strong>Email:</strong>{" "}
-                      <a
-                        href="mailto:info@kitengineeringconsulting.net"
-                        className="text-blue-600 hover:text-blue-700 underline"
-                      >
-                        info@kitengineeringconsulting.net
-                      </a>
+                      <ProtectedEmailLink
+                        email="info@kitengineeringconsulting.net"
+                        className="text-blue-600 hover:text-blue-700"
+                        rel="nofollow"
+                      />
                     </p>
                     <p className="text-slate-700">
                       <strong>Phone:</strong>{" "}

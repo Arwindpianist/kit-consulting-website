@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Mail, Phone, MapPin } from "lucide-react"
+import ProtectedEmailLink from "@/components/ProtectedEmailLink"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -54,13 +55,14 @@ export default function Footer() {
           <div className="md:col-span-2 lg:col-span-1 lg:justify-self-end">
             <h3 className="mb-3 text-sm font-semibold">Contact</h3>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-xs text-slate-400">
-              <a
-                href="mailto:info@kitengineeringconsulting.net"
-                className="group flex items-center gap-2 transition-all hover:text-white hover:translate-x-1"
-              >
+              <div className="group flex items-center gap-2 text-xs text-slate-400 transition-all hover:text-white hover:translate-x-1">
                 <Mail className="h-3.5 w-3.5 flex-shrink-0 text-blue-400" />
-                <span>info@kitengineeringconsulting.net</span>
-              </a>
+                <ProtectedEmailLink
+                  email="info@kitengineeringconsulting.net"
+                  className="truncate text-xs"
+                  rel="nofollow"
+                />
+              </div>
               <a
                 href="tel:+60129100417"
                 className="group flex items-center gap-2 transition-all hover:text-white hover:translate-x-1"

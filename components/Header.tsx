@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { RainbowButton } from "@/components/ui/rainbow-button"
 import { Drawer } from "vaul"
 import { cn } from "@/lib/utils"
+import ProtectedEmailLink from "@/components/ProtectedEmailLink"
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -224,16 +225,17 @@ export default function Header() {
                 <div 
                   className="mt-4 grid grid-cols-2 gap-3"
                 >
-                  <a
-                    href="mailto:info@kitengineeringconsulting.net"
-                    className="group flex flex-col items-center justify-center rounded-2xl border border-white/20 bg-white/70 p-4 text-center shadow-sm shadow-slate-900/8 transition-transform hover:bg-white/75 hover:shadow-md hover:shadow-slate-900/10 active:scale-95"
+                  <ProtectedEmailLink
+                    email="info@kitengineeringconsulting.net"
+                    rel="nofollow"
+                    className="group flex w-full flex-col items-center justify-center rounded-2xl border border-white/20 bg-white/70 p-4 text-center text-slate-900 shadow-sm shadow-slate-900/8 transition-transform hover:bg-white/75 hover:no-underline hover:shadow-md hover:shadow-slate-900/10 active:scale-95"
                   >
                     <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-blue-50/70">
                       <span className="text-xl">📧</span>
                     </div>
                     <span className="text-xs font-semibold text-slate-900">Email Us</span>
                     <span className="text-xs text-slate-500 mt-1 truncate w-full">info@kit...</span>
-                  </a>
+                  </ProtectedEmailLink>
                   <a
                     href="tel:+60129100417"
                     className="group flex flex-col items-center justify-center rounded-2xl border border-white/20 bg-white/70 p-4 text-center shadow-sm shadow-slate-900/8 transition-transform hover:bg-white/75 hover:shadow-md hover:shadow-slate-900/10 active:scale-95"

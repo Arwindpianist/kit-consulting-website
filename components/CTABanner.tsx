@@ -1,5 +1,6 @@
 import CTAButton from "./CTAButton"
 import { ArrowRight, Mail, Phone, CheckCircle } from "./icons"
+import ProtectedEmailLink from "@/components/ProtectedEmailLink"
 
 export default function CTABanner() {
   return (
@@ -75,16 +76,17 @@ export default function CTABanner() {
 
           {/* Right Contact Cards - Spans 2 columns */}
           <div className="space-y-4 lg:col-span-2">
-            <a
-              href="mailto:kit.engineering.consulting@gmail.com"
-              className="group block overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition-all hover:border-blue-400/50 hover:bg-white/10"
+            <ProtectedEmailLink
+              email="info@kitengineeringconsulting.net"
+              rel="nofollow"
+              className="group block overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 text-left text-white backdrop-blur-xl transition-all hover:border-blue-400/50 hover:bg-white/10 hover:no-underline"
             >
               <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/20">
                 <Mail className="h-6 w-6 text-blue-300" />
               </div>
               <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-300">Email Us</div>
-              <div className="text-sm font-semibold text-white">kit.engineering.consulting@gmail.com</div>
-            </a>
+              <div className="text-sm font-semibold text-white">info@kitengineeringconsulting.net</div>
+            </ProtectedEmailLink>
 
             <a
               href="tel:+60129100417"

@@ -1,6 +1,27 @@
-# Allow all crawlers
+# robots.txt generated for KIT Consulting
+# Allow major crawlers full access to public pages and static assets.
+
 User-agent: *
 Allow: /
+Allow: /_next/
+Allow: /static/
+Allow: /public/
 
-# Sitemap location
-Sitemap: https://kitconsulting.com/sitemap.xml
+# Block endpoints that are not useful for indexing.
+Disallow: /api/
+Disallow: /scripts/
+
+# Hidden client testimonial submission page should not appear in search results.
+Disallow: /testimonials/submit
+
+# Explicit directives for Googlebot to ensure resources are crawlable.
+User-agent: Googlebot
+Allow: /
+Allow: /_next/
+Allow: /static/
+Allow: /public/
+Disallow: /api/
+
+# Sitemap and host information for search engines.
+Sitemap: https://kitengineeringconsulting.net/sitemap.xml
+Host: https://kitengineeringconsulting.net

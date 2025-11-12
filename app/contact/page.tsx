@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import ContactForm from "@/components/ContactForm"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import ProtectedEmailLink from "@/components/ProtectedEmailLink"
 
 export const metadata: Metadata = {
   title: "Contact KIT Consulting Malaysia - Engineering Consultancy in Kuala Lumpur",
@@ -35,8 +36,8 @@ const contactInfo = [
     icon: Mail,
     title: "Email Us",
     value: "info@kitengineeringconsulting.net",
-    link: "mailto:info@kitengineeringconsulting.net",
     gradient: "from-blue-500 to-cyan-500",
+    type: "email" as const,
   },
   {
     icon: Phone,
@@ -218,7 +219,13 @@ export default function ContactPage() {
                           </div>
                           <div className="flex-1">
                             <h4 className="text-sm font-semibold text-slate-900">{info.title}</h4>
-                            {info.link ? (
+                            {info.type === "email" ? (
+                              <ProtectedEmailLink
+                                email={info.value}
+                                className="text-xs"
+                                rel="nofollow"
+                              />
+                            ) : info.link && info.link !== "#" ? (
                               <a
                                 href={info.link}
                                 className="text-xs text-blue-600 hover:text-blue-700 hover:underline"
@@ -434,12 +441,11 @@ export default function ContactPage() {
                   <div className="flex w-full flex-wrap items-center justify-center gap-3 text-left sm:justify-between">
                     <div className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white/80 px-4 py-3 text-sm text-slate-600">
                       <Mail className="h-4 w-4 text-blue-600" />
-                      <a
-                        href="mailto:info@kitengineeringconsulting.net"
-                        className="font-semibold text-blue-600 hover:text-blue-700"
-                      >
-                        info@kitengineeringconsulting.net
-                      </a>
+                      <ProtectedEmailLink
+                        email="info@kitengineeringconsulting.net"
+                        className="font-semibold"
+                        rel="nofollow"
+                      />
                     </div>
                     <div className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white/80 px-4 py-3 text-xs text-slate-600 sm:text-sm">
                       <Phone className="h-4 w-4 text-blue-600" />

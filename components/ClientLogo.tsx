@@ -1,29 +1,24 @@
 "use client"
 
-import { useState } from "react"
-
 interface ClientLogoProps {
   name: string
-  logo: string
+  gradient: string
 }
 
-export default function ClientLogo({ name, logo }: ClientLogoProps) {
-  const [imageError, setImageError] = useState(false)
+export default function ClientLogo({ name, gradient }: ClientLogoProps) {
+  const initials = name
+    .split(" ")
+    .map((word) => word.charAt(0))
+    .join("")
+    .slice(0, 2)
 
   return (
-    <div className="flex flex-col items-center gap-3">
-      {!imageError ? (
-        <img
-          src={logo}
-          alt={`${name} logo`}
-          className="h-12 w-12 object-contain grayscale hover:grayscale-0 transition-all"
-          onError={() => setImageError(true)}
-        />
-      ) : (
-        <div className="h-12 w-12 rounded-full bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center text-white text-xl font-bold">
-          {name.charAt(0)}
-        </div>
-      )}
+    <div className="flex flex-col items-center gap-3 text-center">
+      <div
+        className={`flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${gradient} text-lg font-bold uppercase text-white shadow-lg shadow-blue-500/20 transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl`}
+      >
+        {initials}
+      </div>
       <p className="text-sm font-semibold text-slate-700">{name}</p>
     </div>
   )

@@ -103,6 +103,9 @@ export const metadata: Metadata = {
     // google: 'your-google-verification-code',
     // yandex: 'your-yandex-verification-code',
   },
+  alternates: {
+    canonical: 'https://kitengineeringconsulting.net',
+  },
 }
 
 export default function RootLayout({

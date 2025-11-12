@@ -3,6 +3,7 @@ import { FileText, Scale, AlertCircle, CheckCircle2, XCircle, Briefcase } from "
 import BlurFade from "@/components/magicui/blur-fade"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import ProtectedEmailLink from "@/components/ProtectedEmailLink"
 
 export const metadata: Metadata = {
   title: "Terms & Conditions - KIT Consulting",
@@ -307,14 +308,13 @@ export default function TermsPage() {
                     <p>
                       <strong>Registered Address:</strong> Kuala Lumpur, Malaysia
                     </p>
-                    <p>
+                    <p className="text-slate-700">
                       <strong>Email:</strong>{" "}
-                      <a
-                        href="mailto:info@kitengineeringconsulting.net"
-                        className="text-blue-600 hover:text-blue-700 underline"
-                      >
-                        info@kitengineeringconsulting.net
-                      </a>
+                      <ProtectedEmailLink
+                        email="info@kitengineeringconsulting.net"
+                        className="text-blue-600 hover:text-blue-700"
+                        rel="nofollow"
+                      />
                     </p>
                     <p>
                       <strong>Phone:</strong>{" "}
