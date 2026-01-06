@@ -18,13 +18,12 @@ export const metadata: Metadata = {
     template: "%s | KIT Consulting"
   },
   description:
-    "KIT Consulting (KITCON) - Your trusted partner in Construction Execution, Tendering and Process Optimization. Expert EPCC project management, technical due diligence, and remote engineering solutions across Malaysia and Southeast Asia.",
+    "KIT Consulting (KITCON) - Your trusted partner in Construction Execution, Tendering and Process Optimization. Expert technical due diligence and remote engineering solutions across Malaysia and Southeast Asia.",
   keywords: [
     "kit consulting",
     "kitcon",
     "kit engineering consulting",
     "engineering consulting malaysia",
-    "EPCC project management malaysia",
     "construction execution malaysia",
     "tendering support malaysia",
     "tendering strategies",
@@ -63,7 +62,7 @@ export const metadata: Metadata = {
     url: "https://kitengineeringconsulting.net",
     siteName: "KIT Consulting | KITCON",
     title: "KIT Consulting | KITCON - Engineering & Project Management Solutions",
-    description: "Your trusted partner in Construction Execution, Tendering and Process Optimization. 11+ years of excellence in EPCC project management across Malaysia and Southeast Asia.",
+    description: "Your trusted partner in Construction Execution, Tendering and Process Optimization. 11+ years of excellence in engineering consulting across Malaysia and Southeast Asia.",
     images: [
       {
         url: "/opengraph-image.png",

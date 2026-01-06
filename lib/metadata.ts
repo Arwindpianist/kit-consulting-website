@@ -23,7 +23,6 @@ export function generateMetadata({
 
   const defaultKeywords = [
     "engineering consulting",
-    "EPCC project management",
     "tendering support",
     "technical due diligence",
     "remote engineering",
@@ -108,7 +107,6 @@ export const organizationSchema = {
     name: "Malaysia",
   },
   serviceType: [
-    "EPCC Project Management",
     "Tendering Support",
     "Technical Due Diligence",
     "Remote Engineering Solutions",

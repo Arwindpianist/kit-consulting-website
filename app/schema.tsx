@@ -27,7 +27,6 @@ export function generateOrganizationSchema() {
     },
     slogan: 'Engineering Solutions for Tomorrow\'s Industries',
     knowsAbout: [
-      'EPCC Project Management',
       'Construction Execution',
       'Tendering Support',
       'Technical Due Diligence',
@@ -60,7 +59,7 @@ export function generateLocalBusinessSchema() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'KIT Consulting',
-    description: 'Engineering consultancy verified on Google Business, delivering EPCC project management, tendering strategy, and technical due diligence across Kuala Lumpur and Southeast Asia.',
+    description: 'Engineering consultancy verified on Google Business, delivering tendering strategy and technical due diligence across Kuala Lumpur and Southeast Asia.',
     url: 'https://kitengineeringconsulting.net',
     telephone: '+60-12-9100417',
     email: 'info@kitengineeringconsulting.net',

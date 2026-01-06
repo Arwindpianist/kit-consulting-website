@@ -12,11 +12,10 @@ import ProtectedEmailLink from "@/components/ProtectedEmailLink"
 export const metadata: Metadata = {
   title: "Contact KIT Consulting Malaysia - Engineering Consultancy in Kuala Lumpur",
   description:
-    "Contact KIT Consulting (KITCON) for EPCC Project Management, Tendering Support, and Engineering Services in Malaysia. Based in Kuala Lumpur, serving Oil & Gas, Power, and Chemical industries across Southeast Asia. Call +6012-2333 880 or email info@kitengineeringconsulting.net",
+    "Contact KIT Consulting (KITCON) for Tendering Support and Engineering Services in Malaysia. Based in Kuala Lumpur, serving Oil & Gas, Power, and Chemical industries across Southeast Asia. Call +6012-2333 880 or email info@kitengineeringconsulting.net",
   keywords: [
     "contact engineering consultant malaysia",
     "kuala lumpur engineering services",
-    "epcc contractor contact",
     "tendering support malaysia",
     "technical due diligence services",
     "engineering consultation malaysia"
@@ -388,7 +387,7 @@ export default function ContactPage() {
               {[
                 {
                   question: "What services do you offer?",
-                  answer: "We provide comprehensive engineering consulting including Construction Execution (EPCC), Tendering & Procurement, Process Optimization, and Technical Due Diligence services.",
+                  answer: "We provide comprehensive engineering consulting including Tendering & Procurement, Process Optimization, and Technical Due Diligence services.",
                 },
                 {
                   question: "What industries do you serve?",

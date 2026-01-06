@@ -30,7 +30,7 @@ const sections = [
     content: [
       {
         subtitle: "Scope of Services",
-        text: "KIT Consulting provides engineering consulting services including but not limited to EPCC Project Management, Tendering Support, Technical Due Diligence, and Remote Engineering Services. Specific services, deliverables, timelines, and fees are outlined in individual service agreements or proposals.",
+        text: "KIT Consulting provides engineering consulting services including but not limited to Tendering Support, Technical Due Diligence, and Remote Engineering Services. Specific services, deliverables, timelines, and fees are outlined in individual service agreements or proposals.",
       },
       {
         subtitle: "Professional Standards",

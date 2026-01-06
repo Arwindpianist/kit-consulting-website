@@ -22,9 +22,9 @@ const yearsInBusiness = new Date().getFullYear() - FOUNDING_YEAR;
 export const metadata: Metadata = {
   title: "KIT Consulting Kuala Lumpur | Engineering Experts",
   description:
-    "KIT Consulting (KITCON) delivers EPCC project management, tendering support, and technical due diligence across Malaysia and Southeast Asia from our Kuala Lumpur HQ.",
-  keywords:
-    "engineering consulting kuala lumpur, EPCC project management malaysia, tendering support kuala lumpur, technical due diligence malaysia, remote engineering malaysia, construction execution kl, process optimization malaysia, Petronas partner, Shell Malaysia contractor, BASF vendor",
+    "KIT Consulting (KITCON) delivers tendering support and technical due diligence across Malaysia and Southeast Asia from our Kuala Lumpur HQ.",
+    keywords:
+    "engineering consulting kuala lumpur, tendering support kuala lumpur, technical due diligence malaysia, remote engineering malaysia, construction execution kl, process optimization malaysia, Petronas partner, Shell Malaysia contractor, BASF vendor",
 }
 
 const clients = [
@@ -44,12 +44,6 @@ const stats = [
 ]
 
 const services = [
-  {
-    icon: Building2,
-    title: "EPCC Project Management",
-    description: "Our experts guide you through project execution and provide strategic oversight for efficient delivery",
-    gradient: "from-blue-500 to-cyan-500",
-  },
   {
     icon: FileCheck,
     title: "Tender Support & Strategy",
@@ -74,7 +68,7 @@ const googleReviews = [
   {
     name: "Project Director, Energy Sector",
     rating: 5,
-    text: "KIT Consulting guided our EPCC execution with precision and kept every stakeholder aligned. Their Kuala Lumpur team is responsive and detail-oriented.",
+    text: "KIT Consulting provided excellent tendering support and kept every stakeholder aligned. Their Kuala Lumpur team is responsive and detail-oriented.",
   },
   {
     name: "Head of Engineering, Manufacturing",
@@ -241,7 +235,7 @@ export default function HomePage() {
             </ScrollReveal>
           </div>
 
-          <div className="mt-20 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-20 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => {
               const Icon = service.icon
               return (

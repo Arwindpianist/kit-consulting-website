@@ -16,7 +16,7 @@ const yearsInBusiness = currentYear - FOUNDING_YEAR;
 export const metadata: Metadata = {
   title: `About KIT Consulting - ${yearsInBusiness}+ Years Engineering Excellence in Malaysia`,
   description:
-    `Founded in 2014 and Google-verified in Kuala Lumpur, KIT Consulting (KITCON) delivers EPCC Project Management, Tender Strategy, and Technical Due Diligence for Petronas, Shell, Hess, ExxonMobil, BASF and regional energy leaders. 30+ years of combined experience, 40+ completed projects, ISO-certified processes.`,
+    `Founded in 2014 and Google-verified in Kuala Lumpur, KIT Consulting (KITCON) delivers Tender Strategy and Technical Due Diligence for Petronas, Shell, Hess, ExxonMobil, BASF and regional energy leaders. 30+ years of combined experience, 40+ completed projects, ISO-certified processes.`,
 }
 
 const values = [

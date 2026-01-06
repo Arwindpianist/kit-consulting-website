@@ -18,8 +18,13 @@ const yearsInBusiness = new Date().getFullYear() - FOUNDING_YEAR;
 const categoryMap: Record<string, { label: string; color: string }> = {
   TSS: { label: "Tendering Support", color: "bg-blue-100 text-blue-700 border-blue-200" },
   TDD: { label: "Technical Due Diligence", color: "bg-purple-100 text-purple-700 border-purple-200" },
-  EPM: { label: "EPCC Project Management", color: "bg-green-100 text-green-700 border-green-200" },
   RE: { label: "Remote Engineering", color: "bg-orange-100 text-orange-700 border-orange-200" },
+  EPM: { label: "Project Management", color: "bg-slate-100 text-slate-700 border-slate-200" }, // Legacy category - kept for historical projects
+}
+
+// Helper function to safely get category info with fallback
+const getCategoryInfo = (category: string) => {
+  return categoryMap[category] || { label: category, color: "bg-gray-100 text-gray-700 border-gray-200" }
 }
 
 export default function ProjectsPage() {
@@ -30,8 +35,11 @@ export default function ProjectsPage() {
   // Get unique years
   const years = Array.from(new Set(projectsData.map((p) => p.year))).sort().reverse()
 
-  // Filter projects
+  // Filter projects (exclude EPM category as we no longer offer EPCC services)
   const filteredProjects = projectsData.filter((project) => {
+    // Exclude EPM projects
+    if (project.category === "EPM") return false
+    
     const matchesSearch =
       project.scope.toLowerCase().includes(searchTerm.toLowerCase())
     const matchesCategory = selectedCategory === "all" || project.category === selectedCategory
@@ -105,11 +113,10 @@ export default function ProjectsPage() {
                     Service Category
                   </label>
                   <Tabs value={selectedCategory} onValueChange={setSelectedCategory}>
-                    <TabsList className="grid w-full grid-cols-2 gap-2 h-auto p-2 sm:grid-cols-3 md:grid-cols-5 md:gap-0 md:p-1">
+                    <TabsList className="grid w-full grid-cols-2 gap-2 h-auto p-2 sm:grid-cols-3 md:grid-cols-4 md:gap-0 md:p-1">
                       <TabsTrigger value="all" className="py-2">All</TabsTrigger>
                       <TabsTrigger value="TSS" className="py-2">Tendering</TabsTrigger>
                       <TabsTrigger value="TDD" className="py-2">Due Diligence</TabsTrigger>
-                      <TabsTrigger value="EPM" className="py-2">EPCC</TabsTrigger>
                       <TabsTrigger value="RE" className="py-2">Remote Eng.</TabsTrigger>
                     </TabsList>
                   </Tabs>
@@ -164,8 +171,8 @@ export default function ProjectsPage() {
                   <Card className="glass-card glass-card-hover group flex h-full flex-col overflow-hidden">
                     <CardHeader>
                       <div className="mb-3 flex items-start justify-between">
-                        <Badge className={categoryMap[project.category].color}>
-                          {categoryMap[project.category].label}
+                        <Badge className={getCategoryInfo(project.category).color}>
+                          {getCategoryInfo(project.category).label}
                         </Badge>
                         <Badge variant="outline">{project.year}</Badge>
                       </div>

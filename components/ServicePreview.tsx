@@ -20,20 +20,12 @@ export default function ServicePreview() {
       number: "02"
     },
     {
-      icon: Briefcase,
-      title: "EPCC Project Management",
-      description: "End-to-end project delivery ensuring on-time, on-budget completion with quality assurance.",
-      slug: "epcc-project-management",
-      gradient: "from-teal-600 via-teal-500 to-emerald-500",
-      number: "03"
-    },
-    {
       icon: Monitor,
       title: "Remote Engineering Solutions",
       description: "Cost-effective remote support providing expert guidance, optimization, and problem-solving.",
       slug: "remote-engineering",
       gradient: "from-emerald-600 via-emerald-500 to-green-500",
-      number: "04"
+      number: "03"
     },
   ]
 
@@ -63,14 +55,12 @@ export default function ServicePreview() {
         </div>
 
         {/* Services Grid - Bento Style */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <Link
               key={service.slug}
               href="/services"
-              className={`group relative overflow-hidden rounded-3xl bg-gradient-to-br ${service.gradient} p-8 text-white shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${
-                index === 0 ? "lg:col-span-2 lg:row-span-2" : ""
-              }`}
+              className={`group relative overflow-hidden rounded-3xl bg-gradient-to-br ${service.gradient} p-8 text-white shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl`}
             >
               {/* Background Pattern */}
               <div className="absolute inset-0 opacity-10">
@@ -92,10 +82,10 @@ export default function ServicePreview() {
                 </div>
 
                 {/* Text */}
-                <h3 className={`mb-4 font-bold leading-tight ${index === 0 ? "text-3xl" : "text-xl"}`}>
+                <h3 className="mb-4 text-xl font-bold leading-tight">
                   {service.title}
                 </h3>
-                <p className={`mb-6 leading-relaxed text-white/90 ${index === 0 ? "text-lg" : "text-base"}`}>
+                <p className="mb-6 text-base leading-relaxed text-white/90">
                   {service.description}
                 </p>
 

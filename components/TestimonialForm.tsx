@@ -282,9 +282,6 @@ export default function TestimonialForm() {
                       <SelectValue placeholder="Select service type" />
                     </SelectTrigger>
                     <SelectContent className="bg-white border-slate-300 shadow-xl">
-                      <SelectItem value="EPCC Project Management" className="cursor-pointer">
-                        EPCC Project Management
-                      </SelectItem>
                       <SelectItem value="Tendering Support" className="cursor-pointer">
                         Tendering Support
                       </SelectItem>

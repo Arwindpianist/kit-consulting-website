@@ -15,7 +15,6 @@ export default function ProjectTable({ projects }: ProjectTableProps) {
     { value: "all", label: "All Projects" },
     { value: "TSS", label: "Tendering Support" },
     { value: "TDD", label: "Technical Due Diligence" },
-    { value: "EPM", label: "EPCC Project Management" },
     { value: "RE", label: "Remote Engineering" },
   ]
 

@@ -36,8 +36,8 @@ export default function CTABanner() {
             </h2>
 
             <p className="max-w-2xl text-lg leading-relaxed text-blue-100">
-              Partner with KIT Consulting for expert solutions in construction execution, tendering strategies, 
-              and EPCC project management. Let's achieve excellence together.
+              Partner with KIT Consulting for expert solutions in construction execution and tendering strategies. 
+              Let's achieve excellence together.
             </p>
 
             {/* Key Benefits */}

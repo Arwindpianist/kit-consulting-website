@@ -10,32 +10,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = {
-  title: "Engineering Services in Kuala Lumpur - EPCC, Tendering, Due Diligence | KIT Consulting",
+  title: "Engineering Services in Kuala Lumpur - Tendering, Due Diligence | KIT Consulting",
   description:
-    "Google-verified engineering consultancy in Kuala Lumpur delivering EPCC Project Management, Tendering Strategies, Technical Due Diligence, and Remote Engineering across Malaysia and Southeast Asia.",
+    "Google-verified engineering consultancy in Kuala Lumpur delivering Tendering Strategies, Technical Due Diligence, and Remote Engineering across Malaysia and Southeast Asia.",
 }
 
 const mainServices = [
-  {
-    icon: Building2,
-    title: "EPCC Project Management",
-    description: "Our experts guide you through project execution and provide strategic oversight for efficient delivery.",
-    gradient: "from-blue-500 to-cyan-500",
-    features: [
-      "Meticulous project planning and execution",
-      "Technical due diligence and risk identification",
-      "Strategic management and resource optimization",
-      "Engineering design oversight",
-      "Construction supervision",
-      "Quality assurance and control",
-    ],
-    benefits: [
-      "Enhanced project success",
-      "Reduced project risks",
-      "Efficient resource utilization",
-      "On-time and on-budget delivery",
-    ],
-  },
   {
     icon: FileCheck,
     title: "Tender Support & Strategy",
@@ -205,7 +185,7 @@ export default function ServicesPage() {
           </div>
 
           <Tabs defaultValue="0" className="w-full">
-            <TabsList className="mb-8 grid w-full grid-cols-1 gap-3 h-auto sm:grid-cols-2 lg:grid-cols-4 p-2 bg-slate-100/80 rounded-xl">
+            <TabsList className="mb-8 grid w-full grid-cols-1 gap-3 h-auto sm:grid-cols-2 lg:grid-cols-3 p-2 bg-slate-100/80 rounded-xl">
               {mainServices.map((service, index) => {
                 const Icon = service.icon
                 return (
@@ -237,7 +217,9 @@ export default function ServicesPage() {
                             <Icon className="h-6 w-6" />
                           </div>
                           <div>
-                            <Badge variant="secondary" className="mb-1 text-xs">{`0${index + 1}`}</Badge>
+                            <Badge variant="secondary" className="mb-1 text-xs">
+                              {String(index + 1).padStart(2, '0')}
+                            </Badge>
                             <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
                           </div>
                         </div>
@@ -359,7 +341,7 @@ export default function ServicesPage() {
             </BlurFade>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {industries.map((industry, index) => (
               <BlurFade key={index} delay={0.1 + index * 0.1}>
                 <Card className="glass-card glass-card-hover group h-full overflow-hidden flex flex-col">

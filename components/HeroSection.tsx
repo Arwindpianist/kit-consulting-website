@@ -34,7 +34,7 @@ export default function HeroSection() {
 
             {/* Description */}
             <p className="max-w-xl text-lg leading-relaxed text-blue-100 md:text-xl">
-              Expert solutions in construction execution, tendering strategies, and EPCC project management. 
+              Expert solutions in construction execution and tendering strategies. 
               We deliver measurable results for industry leaders.
             </p>
 
