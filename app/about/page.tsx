@@ -16,7 +16,7 @@ const yearsInBusiness = currentYear - FOUNDING_YEAR;
 export const metadata: Metadata = {
   title: `About KIT Consulting - ${yearsInBusiness}+ Years Engineering Excellence in Malaysia`,
   description:
-    `Founded in 2014 and Google-verified in Kuala Lumpur, KIT Consulting (KITCON) delivers EPCC Project Management, Tender Strategy, and Technical Due Diligence for Petronas, Shell, Hess, ExxonMobil, BASF and regional energy leaders. ${yearsInBusiness}+ years of excellence, 50+ completed projects, ISO-certified processes.`,
+    `Founded in 2014 and Google-verified in Kuala Lumpur, KIT Consulting (KITCON) delivers EPCC Project Management, Tender Strategy, and Technical Due Diligence for Petronas, Shell, Hess, ExxonMobil, BASF and regional energy leaders. 30+ years of combined experience, 40+ completed projects, ISO-certified processes.`,
 }
 
 const values = [
@@ -47,8 +47,8 @@ const values = [
 ]
 
 const stats = [
-  { value: yearsInBusiness, suffix: "+", label: "Years of Experience" },
-  { value: 50, suffix: "+", label: "Projects Delivered" },
+  { value: 30, suffix: "+", label: "Years of Experience" },
+  { value: 40, suffix: "+", label: "Projects Delivered" },
   { value: 30, suffix: "+", label: "Expert Team Members" },
   { value: 99, suffix: "%", label: "Client Satisfaction" },
 ]
@@ -99,8 +99,8 @@ const milestones = [
   },
   {
     year: "2025",
-    title: "50+ Projects",
-    description: "Celebrated successful delivery of over 50 major projects",
+    title: "40+ Projects",
+    description: "Celebrated successful delivery of over 40 major projects",
   },
 ]
 
@@ -128,9 +128,9 @@ export default function AboutPage() {
 
             <BlurFade delay={0.3}>
               <p className="text-xl text-slate-700">
-                For over 11 years, KIT Consulting has been a trusted partner in the energy 
-                and manufacturing sectors, delivering world-class engineering solutions that 
-                drive success and innovation.
+                Providing <strong>tailor-made</strong> consulting solutions to meet our Client's needs within the 
+                <strong> Oil & Gas, Chemicals, Power & Energy industries</strong>. Total combined experience of more than 
+                <strong> 30 years</strong> and completed <strong>40+ projects</strong> to-date.
               </p>
             </BlurFade>
           </div>
@@ -147,10 +147,7 @@ export default function AboutPage() {
                   <Target className="mb-4 h-12 w-12 text-blue-600" />
                   <h2 className="mb-4 text-3xl font-bold text-slate-900">Our Mission</h2>
                   <p className="text-lg leading-relaxed text-slate-700">
-                    To deliver comprehensive solutions for your technical consultancy needs across various industries. 
-                    We specialize in Remote Engineering Solutions, Tendering Strategies and Support, 
-                    Technical Due Diligence for chemical and power plants, and EPCC Project Management, 
-                    ensuring your projects are managed efficiently and effectively.
+                    To deliver <strong>practical</strong> engineering and commercial solutions that <strong>reduce risk</strong> and drive successful outcomes.
                   </p>
                 </CardContent>
               </Card>
@@ -162,9 +159,7 @@ export default function AboutPage() {
                   <Eye className="mb-4 h-12 w-12 text-cyan-600" />
                   <h2 className="mb-4 text-3xl font-bold text-slate-900">Our Vision</h2>
                   <p className="text-lg leading-relaxed text-slate-700">
-                    To be your trusted partner in Construction Execution, Tendering and Process Optimization. 
-                    We guide your projects to success with unparalleled expertise and support tailored to your needs, 
-                    ensuring operational excellence and project success across the energy and manufacturing sectors.
+                    To be the <strong>trusted</strong> consulting partner for businesses operating in complex energy and industrial sectors.
                   </p>
                 </CardContent>
               </Card>

@@ -41,7 +41,7 @@ export default function HeroSection() {
             {/* Key Benefits */}
             <div className="space-y-3">
               {[
-                "50+ Projects Delivered On-Time",
+                "40+ Projects Delivered On-Time",
                 "Proven Cost Optimization Strategies",
                 "Industry-Leading Technical Expertise"
               ].map((benefit) => (

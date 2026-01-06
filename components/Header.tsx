@@ -65,6 +65,7 @@ export default function Header() {
     { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
     { href: "/projects", label: "Projects" },
+    { href: "/brochure", label: "Brochure" },
     { href: "/contact", label: "Contact" },
   ]
 
@@ -237,14 +238,14 @@ export default function Header() {
                     <span className="text-xs text-slate-500 mt-1 truncate w-full">info@kit...</span>
                   </ProtectedEmailLink>
                   <a
-                    href="tel:+60129100417"
+                    href="tel:+60122333880"
                     className="group flex flex-col items-center justify-center rounded-2xl border border-white/20 bg-white/70 p-4 text-center shadow-sm shadow-slate-900/8 transition-transform hover:bg-white/75 hover:shadow-md hover:shadow-slate-900/10 active:scale-95"
                   >
                     <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-blue-50/70">
                       <span className="text-xl">📞</span>
                     </div>
                     <span className="text-xs font-semibold text-slate-900">Call Us</span>
-                    <span className="text-xs text-slate-500 mt-1">012-9100 417</span>
+                    <span className="text-xs text-slate-500 mt-1">+6012-2333 880</span>
                   </a>
                 </div>
               </div>

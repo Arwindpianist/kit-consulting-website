@@ -319,10 +319,10 @@ export default function TermsPage() {
                     <p>
                       <strong>Phone:</strong>{" "}
                       <a
-                        href="tel:+60129100417"
+                        href="tel:+60122333880"
                         className="text-blue-600 hover:text-blue-700 underline"
                       >
-                        012-9100 417
+                        +6012-2333 880
                       </a>
                     </p>
                   </div>

@@ -12,7 +12,7 @@ import ProtectedEmailLink from "@/components/ProtectedEmailLink"
 export const metadata: Metadata = {
   title: "Contact KIT Consulting Malaysia - Engineering Consultancy in Kuala Lumpur",
   description:
-    "Contact KIT Consulting (KITCON) for EPCC Project Management, Tendering Support, and Engineering Services in Malaysia. Based in Kuala Lumpur, serving Oil & Gas, Power, and Chemical industries across Southeast Asia. Call +60-12-9100417 or email info@kitengineeringconsulting.net",
+    "Contact KIT Consulting (KITCON) for EPCC Project Management, Tendering Support, and Engineering Services in Malaysia. Based in Kuala Lumpur, serving Oil & Gas, Power, and Chemical industries across Southeast Asia. Call +6012-2333 880 or email info@kitengineeringconsulting.net",
   keywords: [
     "contact engineering consultant malaysia",
     "kuala lumpur engineering services",
@@ -42,8 +42,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Call Us",
-    value: "012-9100 417",
-    link: "tel:+60129100417",
+    value: "+6012-2333 880",
+    link: "tel:+60122333880",
     gradient: "from-green-500 to-emerald-500",
   },
   {
@@ -60,7 +60,7 @@ const offices = [
     city: "Brickfields",
     country: "Malaysia",
     address: "Level 20, Menara 1 Sentrum, 201 Jalan Tun Sambanthan, Brickfields, 50470 Kuala Lumpur",
-    phone: "012-9100 417",
+    phone: "+6012-2333 880",
     isPrimary: true,
     mapLink: "https://g.page/r/CXO2VjS02kEDEBM/review?utm_source=website&utm_medium=contact_office&utm_campaign=google_reviews",
   },
@@ -450,10 +450,10 @@ export default function ContactPage() {
                     <div className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white/80 px-4 py-3 text-xs text-slate-600 sm:text-sm">
                       <Phone className="h-4 w-4 text-blue-600" />
                       <a
-                        href="tel:+60129100417"
+                        href="tel:+60122333880"
                         className="font-semibold text-blue-600 hover:text-blue-700"
                       >
-                        +60 12-910 0417
+                        +6012-2333 880
                       </a>
                     </div>
                     <div className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white/80 px-4 py-3 text-sm text-slate-600">
@@ -475,7 +475,7 @@ export default function ContactPage() {
                       className="min-w-[200px] border-green-500 text-green-600 hover:border-green-600 hover:text-green-700"
                     >
                       <Link
-                        href="https://wa.me/60129100417?text=Hi%20KIT%20Consulting,%20I'd%20like%20to%20chat%20about%20a%20project."
+                        href="https://wa.me/60122333880?text=Hi%20KIT%20Consulting,%20I'd%20like%20to%20chat%20about%20a%20project."
                         target="_blank"
                         rel="noopener noreferrer"
                       >

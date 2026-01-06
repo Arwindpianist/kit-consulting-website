@@ -223,8 +223,8 @@ export default function ProjectsPage() {
         <div className="container-custom">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { value: "50+", label: "Projects Completed" },
-              { value: `${yearsInBusiness}+`, label: "Years Experience" },
+              { value: "40+", label: "Projects Completed" },
+              { value: "30+", label: "Years Experience" },
               { value: "99%", label: "Success Rate" },
               { value: "30+", label: "Expert Team" },
             ].map((stat, index) => (

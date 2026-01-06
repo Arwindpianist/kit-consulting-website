@@ -89,14 +89,14 @@ export default function CTABanner() {
             </ProtectedEmailLink>
 
             <a
-              href="tel:+60129100417"
+              href="tel:+60122333880"
               className="group block overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition-all hover:border-cyan-400/50 hover:bg-white/10"
             >
               <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/20">
                 <Phone className="h-6 w-6 text-cyan-300" />
               </div>
               <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-cyan-300">Call Us</div>
-              <div className="text-sm font-semibold text-white">012-9100 417</div>
+              <div className="text-sm font-semibold text-white">+6012-2333 880</div>
             </a>
 
             {/* Additional Info Card */}

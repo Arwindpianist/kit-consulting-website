@@ -38,8 +38,8 @@ const mainServices = [
   },
   {
     icon: FileCheck,
-    title: "Tendering Support and Strategies",
-    description: "We assist in developing effective tendering strategies to support and enhance competitiveness and project success.",
+    title: "Tender Support & Strategy",
+    description: "Developing effective tendering strategies to enhance competitiveness and project success for our clients.",
     gradient: "from-violet-500 to-purple-500",
     features: [
       "Effective bidding process optimization",
@@ -58,8 +58,8 @@ const mainServices = [
   },
   {
     icon: TrendingUp,
-    title: "Technical Support and Due Diligence",
-    description: "We provide thorough evaluations for chemical and power plants to ensure compliance and risk management.",
+    title: "Due Diligence",
+    description: "Providing thorough and reliable technical & financial assessments for our clients.",
     gradient: "from-green-500 to-emerald-500",
     features: [
       "Infrastructure assessment",
@@ -79,7 +79,7 @@ const mainServices = [
   {
     icon: Cog,
     title: "Remote Engineering",
-    description: "We provide minor engineering and drafting services remotely to provide you a hassle-free experience.",
+    description: "Providing minor engineering and drafting services remotely to provide you a hassle-free experience.",
     gradient: "from-orange-500 to-red-500",
     features: [
       "Minor engineering work",
@@ -133,19 +133,14 @@ const industries = [
     icon: "🛢️",
   },
   {
-    name: "Power Generation",
-    description: "Conventional and renewable energy facilities",
-    icon: "⚡",
-  },
-  {
-    name: "Chemical Processing",
+    name: "Chemicals",
     description: "Petrochemical and specialty chemical plants",
     icon: "🧪",
   },
   {
-    name: "Manufacturing",
-    description: "Industrial and consumer goods production",
-    icon: "🏭",
+    name: "Power & Energy",
+    description: "Conventional and renewable energy facilities",
+    icon: "⚡",
   },
 ]
 

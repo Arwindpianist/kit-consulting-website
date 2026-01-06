@@ -37,8 +37,8 @@ const clients = [
 ]
 
 const stats = [
-  { value: 50, label: "Projects Delivered", suffix: "+" },
-  { value: yearsInBusiness, label: "Years Experience", suffix: "+" },
+  { value: 40, label: "Projects Delivered", suffix: "+" },
+  { value: 30, label: "Years Experience", suffix: "+" },
   { value: 99, label: "Client Satisfaction", suffix: "%" },
   { value: 30, label: "Industry Experts", suffix: "+" },
 ]
@@ -52,20 +52,20 @@ const services = [
   },
   {
     icon: FileCheck,
-    title: "Tendering Support and Strategies",
-    description: "We assist in developing effective tendering strategies to support and enhance competitiveness",
+    title: "Tender Support & Strategy",
+    description: "Developing effective tendering strategies to enhance competitiveness and project success for our clients",
     gradient: "from-violet-500 to-purple-500",
   },
   {
     icon: TrendingUp,
-    title: "Technical Support and Due Diligence",
-    description: "We provide thorough evaluations for chemical and power plants to ensure compliance",
+    title: "Due Diligence",
+    description: "Providing thorough and reliable technical & financial assessments for our clients",
     gradient: "from-green-500 to-emerald-500",
   },
   {
     icon: Cog,
     title: "Remote Engineering",
-    description: "We provide minor engineering and drafting services remotely for a hassle-free experience",
+    description: "Providing minor engineering and drafting services remotely to provide you a hassle-free experience",
     gradient: "from-orange-500 to-red-500",
   },
 ]
@@ -318,9 +318,9 @@ export default function HomePage() {
               
               <ScrollReveal delay={0.3} yOffset={20} duration={0.6}>
                 <p className="mb-8 text-xl text-slate-600 leading-relaxed">
-                  With over 15 years of experience in the energy and manufacturing sectors, 
-                  KIT Consulting brings unparalleled expertise to every project. Our team of 
-                  seasoned professionals ensures quality, efficiency, and innovation.
+                  Providing <strong>tailor-made</strong> consulting solutions to meet our Client's needs within the 
+                  <strong> Oil & Gas, Chemicals, Power & Energy industries</strong>. Total combined experience of more than 
+                  <strong> 30 years</strong> and completed <strong>40+ projects</strong> to-date.
                 </p>
               </ScrollReveal>
             </div>

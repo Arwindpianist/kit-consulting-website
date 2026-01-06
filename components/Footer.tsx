@@ -11,6 +11,7 @@ export default function Footer() {
     { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
     { href: "/projects", label: "Projects" },
+    { href: "/brochure", label: "Brochure" },
     { href: "/contact", label: "Contact" },
   ]
 
@@ -64,11 +65,11 @@ export default function Footer() {
                 />
               </div>
               <a
-                href="tel:+60129100417"
+                href="tel:+60122333880"
                 className="group flex items-center gap-2 transition-all hover:text-white hover:translate-x-1"
               >
                 <Phone className="h-3.5 w-3.5 flex-shrink-0 text-blue-400" />
-                <span>012-9100 417</span>
+                <span>+6012-2333 880</span>
               </a>
               <a
                 href="https://maps.app.goo.gl/L1Emmw3HXdA1L5TP9?utm_source=website&utm_medium=footer&utm_campaign=map_link"
